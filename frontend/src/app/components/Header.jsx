@@ -1,25 +1,7 @@
-// import Image from "next/image";
-
-// export default function  Header(){
-
-//     return <div className="flex items-center justify-between px-20 mt-7">
-//         <div>
-//             <img src="/logo.png" alt="Logo" width={150} />
-//         </div>
-//         <div className="flex gap-44 text-lg font-medium">
-//             <a href="/">Home</a>
-//             <a href="/about">About</a>
-//             <a href="/contact">Contact</a>
-//         </div>
-//         <div>
-//             <Button />
-//         </div>
-//     </div>
-// }
 "use client";
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; // Using lucide-react for icons, a popular choice
-import Button from "./Button";
+import Button from "./Button1";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -29,7 +11,7 @@ export default function Header() {
 
   return (
     <nav className="relative bg-white">
-      <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4">
+      <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-6">
         <div>
           <img src="/logo.png" alt="Logo" width={150} />
         </div>

@@ -1,5 +1,5 @@
-import "./button2.css";
-export default function Button2({children}) {
+import "./button1.css";
+export default function Button1({children}) {
   return (
     <div>
       <button className="style-btn">

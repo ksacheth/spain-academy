@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; // Using lucide-react for icons, a popular choice
-import Button from "./Button1";
+import Button1 from "./Button1/Button1.jsx";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -10,7 +10,7 @@ export default function Header() {
   };
 
   return (
-    <nav className="relative bg-white">
+    <nav className="relative bg-white text-black">
       <div className="  mx-12 flex items-center justify-between px-4 sm:px-6 lg:px-8 py-10">
         <div>
           <img src="/logo.png" alt="Logo" width={160} />
@@ -29,7 +29,7 @@ export default function Header() {
         </div>
 
         <div className="hidden md:block">
-          <Button>Book</Button>
+          <Button1>Book</Button1>
         </div>
 
         <div className="md:hidden">

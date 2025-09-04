@@ -11,12 +11,12 @@ export default function Header() {
 
   return (
     <nav className="relative bg-white">
-      <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-6">
+      <div className="  mx-12 flex items-center justify-between px-4 sm:px-6 lg:px-8 py-10">
         <div>
-          <img src="/logo.png" alt="Logo" width={150} />
+          <img src="/logo.png" alt="Logo" width={160} />
         </div>
 
-        <div className="hidden md:flex items-center gap-30 text-lg font-medium">
+        <div className="hidden md:flex items-center gap-50 text-lg font-medium">
           <a href="/" className="hover:text-blue-500">
             Home
           </a>

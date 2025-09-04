@@ -2,7 +2,7 @@ import Button2 from "./Button2/Button2";
 export default function Hero() {
   return (
     <div
-      className="bg-blue-200 flex text-black"
+      className="bg-blue-200 flex text-black overflow-visible"
       style={{ height: "calc(100vh - 168px)" }}
     >
       <div className="bg-white w-[45.833333%] shrink-0 pl-18 ">

@@ -7,8 +7,10 @@ export default function Progress() {
   const img3Ref = useRef(null);
   const img4Ref = useRef(null);
   const img5Ref = useRef(null);
-  // const img6Ref = useRef(null);
-
+  const img6Ref = useRef(null);
+  const img7Ref = useRef(null);
+  const img8Ref = useRef(null);
+  const img9Ref = useRef(null);
   const placeOnPath = (pct, imgRef, dy = 0) => {
     const path = pathRef.current;
     const img = imgRef.current;
@@ -30,9 +32,14 @@ export default function Progress() {
     placeOnPath(0.248, img3Ref, 0);
     placeOnPath(0.295, img4Ref, 15);
     placeOnPath(0.3814, img5Ref, 130);
+    placeOnPath(0.15, img6Ref, -123);
+    placeOnPath(0.125, img7Ref, -8);
+    placeOnPath(0.265, img8Ref, -140);
+    placeOnPath(0.385, img9Ref, 94);
+
   }, []);
   return (
-    <div className="h-[380vh] bg-[#F9F9F9] rounded-[100px] relative">
+    <div className="h-[435vh] bg-[#F9F9F9] rounded-[100px] relative">
       <div className="bg-transparent z-3 h-100%">
         <svg
           id="Layer_1"
@@ -110,6 +117,7 @@ export default function Progress() {
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 585 479"
+          className="overflow-visible"
         >
           <path
             className="cls-1 fill-none"
@@ -123,6 +131,38 @@ export default function Progress() {
             className=""
             d="M602,0h1v479h-1v-148s-5.88,1.87-5.88,1.87c-64.38,1.44-128.94.24-193.39.61-17.71,1.84-32.61,16.5-34.17,34.33-2.34,26.71,1.83,56.54-.04,83.46-1.93,27.79-38.51,29.31-43.52,2.98l.03-149.03c-.24-19.79-14.49-36.4-34.26-38.74l-202.04.04c-21.42-.03-39.74-15.39-42.16-36.84l-.06-93.93c2.27-19.57,17.58-34.88,37.25-36.75h154.01c49.26-1.53,51.81-77.11,3.47-83H0v-2.51h242.25c50.09,6.98,48.35,84.84-3.47,88.02H84.76c-18.8,1.55-34.24,16.27-35.75,35.24-2.31,29.1,1.73,61.11-.03,90.52,1.21,18.66,14.86,33.52,33.33,36.17,69.95.5,139.99-.7,209.89.61,20.05,3.37,33.99,18.89,35.3,39.2l.13,150.87c5.38,23.74,36.76,21.45,38.39-3.85,1.72-26.73-2.13-56.01-.04-82.54,1.64-20.77,20.6-37.27,41.25-37.25l187.04.04,7.66-2.09.07-328.43Z"
           />
+          <image
+            ref={img6Ref}
+            href="/6.png"
+            width="120"
+            height="120"
+            preserveAspectRatio="xMidYMid meet"
+            style={{ pointerEvents: "none" }}
+          />
+          <image
+            ref={img7Ref}
+            href="/7.png"
+            width="120"
+            height="120"
+            preserveAspectRatio="xMidYMid meet"
+            style={{ pointerEvents: "none" }}
+          />
+          <image
+            ref={img8Ref}
+            href="/8.png"
+            width="260"
+            height="260"
+            preserveAspectRatio="xMidYMid meet"
+            style={{ pointerEvents: "none" }}
+          />
+          <image
+            ref={img9Ref}
+            href="/9.png"
+            width="120"
+            height="120"
+            preserveAspectRatio="xMidYMid meet"
+            style={{ pointerEvents: "none" }}
+          />  
         </svg>
       </div>
     </div>

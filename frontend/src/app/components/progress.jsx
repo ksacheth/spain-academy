@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import Button2 from "./Button2/Button2";
 export default function Progress() {
   const pathRef = useRef(null);
   const img1Ref = useRef(null); // cat+girl
@@ -27,7 +28,7 @@ export default function Progress() {
 
   useEffect(() => {
     // initial placement
-    placeOnPath(0.08, img1Ref, 42); 
+    placeOnPath(0.08, img1Ref, 42);
     placeOnPath(0.12, img2Ref, -2);
     placeOnPath(0.248, img3Ref, 0);
     placeOnPath(0.295, img4Ref, 15);
@@ -36,7 +37,6 @@ export default function Progress() {
     placeOnPath(0.125, img7Ref, -8);
     placeOnPath(0.265, img8Ref, -140);
     placeOnPath(0.385, img9Ref, 94);
-
   }, []);
   return (
     <div className="h-[435vh] bg-[#F9F9F9] rounded-[100px] relative">
@@ -81,7 +81,7 @@ export default function Progress() {
             preserveAspectRatio="xMidYMax meet"
             style={{ pointerEvents: "none" }}
           />
-          <image 
+          <image
             ref={img3Ref}
             href="/3.png"
             width="120"
@@ -89,7 +89,7 @@ export default function Progress() {
             preserveAspectRatio="xMidYMax meet"
             style={{ pointerEvents: "none" }}
           />
-          <image 
+          <image
             ref={img4Ref}
             href="/4.png"
             width="720"
@@ -162,7 +162,7 @@ export default function Progress() {
             height="120"
             preserveAspectRatio="xMidYMid meet"
             style={{ pointerEvents: "none" }}
-          />  
+          />    
         </svg>
       </div>
     </div>

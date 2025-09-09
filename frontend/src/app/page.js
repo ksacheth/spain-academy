@@ -6,8 +6,8 @@ import Progress from "./components/progress";
 export default function Home() {
   return (
     <div className="bg-white">
-      {/* <Headers />
-      <Hero />
+      <Headers />
+      {/* <Hero />
       <Hero2 /> */}
       <Progress />
     </div>

@@ -46,7 +46,7 @@ export default function Progress() {
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 585 605"
-          className="w-[100] pt-[41vh] overflow-visible "
+          className="mt-20 overflow-visible"
         >
           <path
             className="fill-none"
@@ -162,7 +162,7 @@ export default function Progress() {
             height="120"
             preserveAspectRatio="xMidYMid meet"
             style={{ pointerEvents: "none" }}
-          />    
+          />
         </svg>
       </div>
     </div>

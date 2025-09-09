@@ -24,7 +24,11 @@ export default function Hero2() {
       </div>
       <div className="bg-[#F9F9F9] h-173 rounded-b-[70px] px-10 flex">
         <div className="w-[53vw]">
-          <img src="/logo.png" alt="logo" className="h-45 pt-10 ml-20" />
+          <img
+            src="/logo.png"
+            alt="logo"
+            className="pt-10 ml-20 h-16 w-auto sm:h-20 md:h-28 lg:h-36 xl:h-45"
+          />
           <div className="font-serif text-black text-4xl mt-10 ml-25 mb-10 mr-10 tracking-[-0.065em] leading-[1.14] ">
             <span className="text-[#009938] italic ">Spain Academy</span> is
             your all-in-one onboarding kit for life in{" "}
@@ -48,7 +52,11 @@ export default function Hero2() {
           </div>
         </div>
         <div>
-          <img src="/pattern.png" alt="pattern" className="h-100 ml-20 mb-10" />
+          <img
+            src="/pattern.png"
+            alt="pattern"
+            className="ml-20 mb-10 w-[clamp(240px,60vw,700px)] h-auto"
+          />
         </div>
       </div>
       <div className="bg-white h-screen">hi</div>

@@ -32,3 +32,10 @@ body {
     Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
     "Segoe UI Emoji";
 }
+
+/* Make images scale responsively within their containers */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

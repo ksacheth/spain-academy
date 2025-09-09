@@ -1,27 +1,41 @@
 import Button2 from "./Button2/Button2";
+
 export default function Hero() {
   return (
     <div
-      className="bg-blue-200 flex text-black overflow-visible"
+      className="flex min-h-[500px] bg-blue-200 text-black" // Use min-h instead of a fixed calc for more flexibility
       style={{ height: "calc(100vh - 168px)" }}
     >
-      <div className="bg-white w-[45.833333%] shrink-0 pl-18 ">
-        <div className="text-[#009839] pt-18 mb-4">
-          <h1 className="tracking-[-0.045em] leading-[1.14] text-[65px] font-serif">
+      <div className="flex w-[45.833333%] shrink-0 flex-col justify-center bg-white pl-18">        
+        <div className="text-[#009839]">
+          <h1 
+            // clamp(MIN, PREFERRED, MAX)
+            // MIN: 30px (1.875rem)
+            // PREFERRED: Scales between 30px and 65px. 4.5vw is a good starting point.
+            // MAX: 65px (4.0625rem)
+            className="font-serif leading-[1.14] tracking-[-0.045em] text-[clamp(1.875rem,4.5vw,4.0625rem)]"
+          >
             The only Study-in- <span className="italic">Spain</span> program for
             Southeast <span className="italic">Asians</span>
           </h1>
         </div>
-        <div className="text-black text-[20px]  pr-22 mb-20 font-sans-alt tracking-[-0.035em] leading-[1.3] ">
+
+        
+        <div 
+          
+          className="mt-4 mb-20 pr-22 font-sans-alt leading-[1.3] tracking-[-0.035em] text-black text-[clamp(1rem,1.5vw,1.25rem)]"
+        >
           Any questions big or small, We are here to listen, support, and guide.
           So, what are you{" "}
           <span className="text-[#009839] italic">waiting</span> for?"
         </div>
-        <div className=" mb-10">
+
+        
+        <div className="mb-10">
           <Button2>Book a Consultation</Button2>
         </div>
       </div>
-      <div></div>
+      <div className="grow bg-blue-200"></div>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+// app/layout.jsx
 import {
   Geist,
   Geist_Mono,
@@ -6,7 +7,6 @@ import {
   Public_Sans,
 } from "next/font/google";
 import "./globals.css";
-// import LenisProvider from "./components/LenisProvider";
 import { ReactLenis } from "lenis/react";
 
 const geistSans = Geist({
@@ -49,8 +49,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${notoSerif.variable} ${publicSans.variable} antialiased`}
       >
-        {/* <LenisProvider>{children}</LenisProvider> */}
-        <ReactLenis root> {children} </ReactLenis>
+        <ReactLenis root>
+          {children}
+        </ReactLenis>
       </body>
     </html>
   );

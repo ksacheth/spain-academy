@@ -1,3 +1,5 @@
+import TextReveal from "./TextReveal";
+
 export default function Hero2() {
   return (
     <div>
@@ -19,12 +21,15 @@ export default function Hero2() {
         <div className="flex-col w-[60vw]">
           <img src="/logo.png" alt="Logo" className="w-[275px] ml-37" />
           <div className="flex-col w-[41.5vw] ml-50 mt-20 border-1">
-            <div className="font-serif text-[clamp(0.01rem,2.5vw,3rem)] leading-[1.14] tracking-[-0.065em] text-black">
+            <TextReveal>
+              <div className="font-serif text-[clamp(0.01rem,2.5vw,3rem)] leading-[1.14] tracking-[-0.065em] text-black">
               <span className="block"><span className="text-[#009938] italic ">Spain Academy</span> is
               your all-in-one</span> onboarding kit for life in{" "}
               <span className="italic">Spain</span>.
             </div>
-            <div className="mt-10  font-serif  text-[clamp(0.01rem,2.5vw,3rem)] leading-[1.14] tracking-[-0.065em] text-black">
+            </TextReveal>
+            <TextReveal>
+              <div className="mt-10  font-serif  text-[clamp(0.01rem,2.5vw,3rem)] leading-[1.14] tracking-[-0.065em] text-black">
               <span className=" text-[#959595]">
                 From <span className="italic">visas </span>and{" "}
                 <span className="italic">university admissions </span>
@@ -40,6 +45,7 @@ export default function Hero2() {
               prepared, feel at home,and have everything you need to{" "}
               <span className="text-[#009938] italic">thrive</span>.
             </div>
+            </TextReveal>
           </div>
         </div>
         <div className="relative overflow-visible w-[40vw] border-1">

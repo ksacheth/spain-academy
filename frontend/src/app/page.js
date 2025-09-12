@@ -6,10 +6,10 @@ import Progress from "./components/progress";
 import ProgressFixed from "./components/progress_fixed";
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-hidden">
       <Headers />
       <Hero />
-      {/* <Hero2 /> */}
+      <Hero2 />
       {/* <Progress /> */}
       <ProgressFixed />
     </div>

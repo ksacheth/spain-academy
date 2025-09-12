@@ -135,6 +135,7 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import Button2 from "./Button2/Button2";
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
@@ -153,8 +154,12 @@ export default function ProgressFixed() {
   const img7Ref = useRef(null);
   const img8Ref = useRef(null);
   const img9Ref = useRef(null);
+  const text1ref = useRef(null);
+  const text2ref = useRef(null);
+  const text3ref = useRef(null);
+  const text4ref = useRef(null);
 
-  const placeOnPath = (pct, imgRef, dy = 0,pathRef) => {
+  const placeOnPath = (pct, imgRef, dy = 0, pathRef) => {
     const path = pathRef.current;
     const img = imgRef.current;
     if (!path || !img) return;
@@ -171,11 +176,14 @@ export default function ProgressFixed() {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const placeAll = () => {
-        placeOnPath(0.84, img1Ref, 110,pathRef);
-        placeOnPath(0.74, img2Ref, 0,pathRef);
-        placeOnPath(0.5, img3Ref, 0,pathRef);
-        placeOnPath(0.41, img4Ref, 27,pathRef);
-        placeOnPath(0.242, img5Ref, 210,pathRef);
+        placeOnPath(0.84, img1Ref, 110, pathRef);
+        placeOnPath(0.74, img2Ref, 0, pathRef);
+        placeOnPath(0.5, img3Ref, 0, pathRef);
+        placeOnPath(0.41, img4Ref, 27, pathRef);
+        placeOnPath(0.242, img5Ref, 210, pathRef);
+        placeOnPath(0.83, text1ref, -250, pathRef);
+        placeOnPath(0.75, text2ref, 250, pathRef);
+        placeOnPath(0.4, text3ref, 250, pathRef);
       };
       placeAll();
 
@@ -237,14 +245,14 @@ export default function ProgressFixed() {
     return () => ctx.revert();
   }, []);
 
-
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const placeAll = () => {
         placeOnPath(0.1, img6Ref, 5, pathRef2);
         placeOnPath(0.26, img7Ref, 40, pathRef2);
-        placeOnPath(0.525, img8Ref, 50,pathRef2);
+        placeOnPath(0.525, img8Ref, 50, pathRef2);
         placeOnPath(0.89, img9Ref, 0, pathRef2);
+        placeOnPath(0.52, text4ref, 250, pathRef2);
       };
       placeAll();
 
@@ -306,11 +314,9 @@ export default function ProgressFixed() {
     return () => ctx.revert();
   }, []);
 
-
-
   return (
     <div ref={root} className="bg-[#F9F9F9] rounded-[100px] py-20 mt-20">
-      <div className="bg-transparent z-3 h-100%">
+      <div className="bg-transparent h-100%">
         <svg
           ref={svgRef}
           id="Layer_1"
@@ -322,9 +328,9 @@ export default function ProgressFixed() {
           <circle
             id="dot1"
             r="14"
-            fill="#00D4FF"
-            stroke="white"
-            strokeWidth="2"
+            fill="#079839"
+            stroke="#079839"
+            strokeWidth="3"
           />
           <path
             ref={pathRef}
@@ -369,6 +375,86 @@ export default function ProgressFixed() {
             height="208"
             style={{ pointerEvents: "none" }}
           />
+          <foreignObject
+            ref={text1ref}
+            width="380"
+            height="160"
+            className="overflow-visible"
+          >
+            <div xmlns="http://www.w3.org/1999/xhtml">
+              <div className="text-right flex-col ">
+                <div className="font-serif text-[40px] mr-1 text-[#3c3c3c]">
+                  Pre-<span className="italic">Arrival</span>
+                </div>
+                <div className="mt-3 pr-1 tracking-[0.03em] leading-[1.18] text-right text-[17px] font-sans">
+                  <span className="block">Pre-departure Support -</span>
+                  <span className="block">Student Visa Assistance -</span>
+                  <span className="block">Health Insurance Support -</span>
+                  <span className="block">Accommodation Arrangements -</span>
+                </div>
+              </div>
+            </div>
+          </foreignObject>
+          <foreignObject
+            ref={text2ref}
+            width="500"
+            height="160"
+            className="overflow-visible"
+          >
+            <div xmlns="http://www.w3.org/1999/xhtml">
+              <div className="text-left flex-col">
+                <div className="font-serif text-[40px] text-[#3c3c3c]">
+                  Post-<span className="italic">Arrival</span>
+                </div>
+                <div className="mt-3 tracking-[0.03em] leading-[1.18] text-left text-[17px] pr-10 font-sans">
+                  <span className="block">- Airport pick-up</span>
+                  <span className="block">
+                    - Welcoming Orientation: City tour Cultural Guidance
+                  </span>
+                  <span className="block">- Bank Account Setup</span>
+                  <span className="block">
+                    - Mobile Data & Transportation Card Assistance
+                  </span>
+                  <span className="block">- Residence Permit Application</span>
+                </div>
+              </div>
+            </div>
+          </foreignObject>
+          <foreignObject
+            ref={text3ref}
+            width="700"
+            height="160"
+            className="overflow-visible"
+          >
+            <div xmlns="http://www.w3.org/1999/xhtml">
+              <div className="text-right flex-col tracking-[0.035em] leading-[1.07]">
+                <div className="font-serif text-[40px] text-[#3c3c3c] mr-10">
+                  <span className="italic">Academic</span> &{" "}
+                  <span className="italic">Personal</span> Support During the
+                  Program
+                </div>
+                <div className="mt-3 tracking-[0.03em] leading-[1.18] text-right text-[17px] pr-10 font-sans">
+                  <span className="block">Emergency Contacts -</span>
+                  <span className="block">Spanish Language Course -</span>
+                  <span className="block">University Admission -</span>
+                  <span className="block">
+                    University Academic Preparation -
+                  </span>
+                  <span className="block">
+                    One-on-one Academic Counseling -
+                  </span>
+                  <span className="block">
+                    Career Guidance & Internship Opportunities -
+                  </span>
+                  <span className="block">Psychological Counselling -</span>
+                  <span className="block">
+                    Seminars with Professors and Industry Professionals -
+                  </span>
+                  <span className="block">Food & Health Advice -</span>
+                </div>
+              </div>
+            </div>
+          </foreignObject>
         </svg>
       </div>
       <div className="bg-transparent h-100%">
@@ -378,13 +464,13 @@ export default function ProgressFixed() {
           preserveAspectRatio="xMidYMid meet"
           zoomAndPan="magnify"
           className="overflow-visible -mt-85 w-full h-auto"
-          viewBox="0 0 1000 1300"
+          viewBox="0 0 1000 1200"
           ref={svgRef2}
         >
           <circle
             id="dot2"
-            r="14"
-            fill="#00D4FF"
+            r="13"
+            fill="#079839"
             stroke="white"
             strokeWidth="2"
           />
@@ -429,7 +515,33 @@ export default function ProgressFixed() {
             preserveAspectRatio="xMidYMid meet"
             style={{ pointerEvents: "none" }}
           />
+          <foreignObject
+            ref={text4ref}
+            width="330"
+            height="160"
+            className="overflow-visible tracking-[0.035em] leading-[1.07] text-left"
+          >
+            <div xmlns="http://www.w3.org/1999/xhtml" className="flex-col">
+              <div className="text-left flex-col">
+                <div className="font-serif text-[30px] text-[#3c3c3c]">
+                  Post-<span className="italic">Program</span> & Alumni Support
+                </div>
+                <div className="mt-5 tracking-[0.03em] leading-[1.18] text-left text-[14px] pr-10 font-sans">
+                  <span className="block">- Continued Legal Support</span>
+                  <span className="block">
+                    - Erasmus & Study Abroad Guidance
+                  </span>
+                  <span className="block">
+                    - Alumni Network & Career Support{" "}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </foreignObject>
         </svg>
+        <div className="">
+          <Button2>Book a Consultation</Button2>
+        </div>
       </div>
     </div>
   );

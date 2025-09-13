@@ -4,8 +4,8 @@ import TextReveal from "./TextReveal";
 export default function Hero() {
   return (
     <div
-      className="flex min-h-[500px] text-black" // Use min-h instead of a fixed calc for more flexibility
-      style={{ height: "calc(100vh - 200px)" }}
+      className="flex min-h-[500px] text-black mb-[5vh]" // Use min-h instead of a fixed calc for more flexibility
+      style={{ height: "calc(100vh - 250px)" }}
     >
       <div className="flex w-[45.833333%] shrink-0 flex-col justify-center bg-white pl-18">
         <div className="w-[92%] mb-15">
@@ -29,9 +29,13 @@ export default function Hero() {
           <Button2>Book a Consultation</Button2>
         </div>
       </div>
-      <div className="grow relative bg-blue-200 overflow-visible">
-        <span><img src="Person1.png" alt="Hero Image" className=" absolute w-[20vw] top-[130px]" /></span>
-        <span><img src="Person2.png" alt="Hero Image" className=" absolute w-[20vw] left-[250px]" /></span>
+      <div className="grow relative bg-transparent overflow-visible z-10">
+        {/* <span><img src="Person1.png" alt="Hero Image" className=" absolute w-[20vw]  top-[9vw] z-15" /></span> */}
+        <span><img src="Person1.png" alt="Hero Image" className=" absolute w-[20vw]  bottom-0 z-15 " /></span>
+        {/* <span><img src="Person2.png" alt="Hero Image" className=" absolute w-[27vw] left-[17vw] top-[2vw] z-20" /></span> */}
+        <span><img src="Person2.png" alt="Hero Image" className=" absolute w-[27vw] bottom-0 left-[17vw]  z-20 " /></span>
+        {/* <span><img src="Person3.png" alt="Hero Iage" className=" absolute w-[23vw] top-[10vw] left-[37.5vw] z-15" /></span> */}
+        <span><img src="Person3.png" alt="Hero Iage" className=" absolute w-[23vw] bottom-0 left-[37.5vw] z-15 " /></span>
       </div>
     </div>
   );

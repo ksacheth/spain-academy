@@ -68,8 +68,7 @@ import TextReveal from "./TextReveal";
 
 export default function Hero2() {
   return (
-    <div>
-      {/* Top wave */}
+    <div className=" relative z-50">
       <svg
         id="Layer_1"
         data-name="Layer 1"
@@ -77,6 +76,7 @@ export default function Hero2() {
         viewBox="0 0 850 120"
         className="-mt-[12vw]"
         aria-hidden="true"
+
       >
         <path
           className="fill-[#F9F9F9]"

@@ -242,7 +242,7 @@ export default function Progress() {
         </svg>
       </div>
 
-      {/* text */}
+      
 
       <div className="absolute top-[185vh] right-[18.15vw]  text-right z-10 flex-col ">
         <div className="font-serif text-[clamp(1.875rem,3.5vw,4.0625rem)] text-[#3c3c3c] leading-12">
@@ -278,7 +278,7 @@ export default function Progress() {
         </div>
       </div>
 
-      {/* end text */}
+      
       <div className="absolute top-740 left-[11.71vw] z-10">
         <Button2>Book a Consultation</Button2>
       </div>

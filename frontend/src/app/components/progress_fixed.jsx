@@ -137,7 +137,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import Button2 from "./Button2/Button2";
 import TextReveal from "./TextReveal";
-import bindNumberToPath from "./Bind";
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
@@ -163,6 +162,9 @@ export default function ProgressFixed() {
   const dotRef1 = useRef(null);
   const dotRef2 = useRef(null);
 
+  const dot1LabelRef = useRef(null); // NEW: label ref for dot1
+  const dot2LabelRef = useRef(null);
+
   const placeOnPath = (pct, imgRef, dy = 0, whichPathRef) => {
     const path = whichPathRef.current;
     const img = imgRef.current;
@@ -175,6 +177,24 @@ export default function ProgressFixed() {
       Number(img.getAttribute("height")) || img.height?.baseVal?.value || 0;
     img.setAttribute("x", String(x - w / 2));
     img.setAttribute("y", String(y - h + dy));
+  };
+
+  const makeLabelUpdater = (milestones, labelEl) => {
+    // milestones: [{ pct: 0.0..1.0, text: "any" }, ...] sorted ascending
+    let lastIndex = -1;
+    return (progress) => {
+      if (!labelEl) return;
+      // find the last milestone whose pct <= progress
+      let idx = -1;
+      for (let i = 0; i < milestones.length; i++) {
+        if (progress >= milestones[i].pct) idx = i;
+        else break;
+      }
+      if (idx !== -1 && idx !== lastIndex) {
+        labelEl.textContent = milestones[idx].text;
+        lastIndex = idx;
+      }
+    };
   };
 
   useLayoutEffect(() => {
@@ -198,6 +218,18 @@ export default function ProgressFixed() {
         transformOrigin: "50% 50%",
       });
 
+      const dot1Milestones = [
+        { pct: 0.0, text: "01" },
+        { pct: 0.33, text: "02" },
+        { pct: 0.88, text: "03" },
+      ];
+      const updateDot1Label = makeLabelUpdater(
+        dot1Milestones,
+        dot1LabelRef.current
+      );
+      // Initialize
+      updateDot1Label(0);
+
       // Reverse along path: start 1 -> end 0
       const tween = gsap.to("#dot1", {
         motionPath: {
@@ -209,6 +241,12 @@ export default function ProgressFixed() {
           end: 0,
         },
         ease: "none",
+
+        onUpdate: function () {
+          const traveled = this.progress(); // 0..1 regardless of path direction
+          updateDot1Label(traveled);
+        },
+
         scrollTrigger: {
           trigger: svgRef.current,
           start: "top 65%",
@@ -217,7 +255,13 @@ export default function ProgressFixed() {
           scrub: 0.5,
           markers: false,
           invalidateOnRefresh: true,
-          onRefresh: placeAll,
+          onRefresh: () => {
+            placeAll();
+            // keep label in sync after refresh
+            const st = ScrollTrigger.getById?.("__dot1__");
+            // If you want, assign an id; here we just reset to 0
+            updateDot1Label(0);
+          },
         },
       });
 
@@ -255,6 +299,16 @@ export default function ProgressFixed() {
         transformOrigin: "50% 50%",
       });
 
+      const dot2Milestones = [
+        { pct: 0.0, text: "03" },
+        { pct: 0.6, text: "04" },
+      ];
+      const updateDot2Label = makeLabelUpdater(
+        dot2Milestones,
+        dot2LabelRef.current
+      );
+      updateDot2Label(0);
+
       // Forward along path: start 0 -> end 1
       const tween = gsap.to("#dot2", {
         motionPath: {
@@ -266,6 +320,12 @@ export default function ProgressFixed() {
           end: 1,
         },
         ease: "none",
+
+        onUpdate: function () {
+          const traveled = this.progress(); // 0..1 traveled
+          updateDot2Label(traveled);
+        },
+
         scrollTrigger: {
           trigger: svgRef2.current,
           start: "top 50%",
@@ -274,7 +334,10 @@ export default function ProgressFixed() {
           scrub: 0.5,
           markers: false,
           invalidateOnRefresh: true,
-          onRefresh: placeAll,
+          onRefresh: () => {
+            placeAll();
+            updateDot2Label(0);
+          },
         },
       });
 
@@ -317,6 +380,7 @@ export default function ProgressFixed() {
           <g id="dot1" ref={dotRef1}>
             <circle r="18" fill="#079839" stroke="#079839" strokeWidth="3" />
             <text
+              ref={dot1LabelRef}
               id="dot1Label"
               fontSize="18"
               fontWeight="500"
@@ -480,6 +544,7 @@ export default function ProgressFixed() {
           <g id="dot2" ref={dotRef2}>
             <circle r="13" fill="#079839" stroke="white" strokeWidth="0" />
             <text
+              ref={dot2LabelRef}
               id="dot2Label"
               fontSize="13"
               fontFamily="ui-sans-serif, system-ui, sans-serif"

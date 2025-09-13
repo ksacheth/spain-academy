@@ -8,7 +8,7 @@ export default function Hero() {
       style={{ height: "calc(100vh - 200px)" }}
     >
       <div className="flex w-[45.833333%] shrink-0 flex-col justify-center bg-white pl-18">
-        <div className="border-1 w-[92%] mb-15">
+        <div className="w-[92%] mb-15">
           <div className="font-serif leading-[1.14] tracking-[-0.045em] text-[clamp(1.875rem,4.5vw,8.0625rem)] text-[#009839]">
             <TextReveal>
               <h1>

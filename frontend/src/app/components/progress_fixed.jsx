@@ -328,7 +328,7 @@ export default function ProgressFixed() {
 
         scrollTrigger: {
           trigger: svgRef2.current,
-          start: "top 50%",
+          start: "top 45%",
           end: () =>
             "+=" + (pathRef2.current?.getBoundingClientRect().height || 600),
           scrub: 0.5,

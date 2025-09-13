@@ -1,4 +1,5 @@
 // app/layout.jsx
+import { Analytics } from "@vercel/analytics/next"
 import {
   Geist,
   Geist_Mono,
@@ -52,6 +53,7 @@ export default function RootLayout({ children }) {
         <ReactLenis root>
           {children}
         </ReactLenis>
+        <Analytics />
       </body>
     </html>
   );

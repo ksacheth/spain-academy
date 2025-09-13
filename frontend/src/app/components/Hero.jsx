@@ -4,7 +4,7 @@ import TextReveal from "./TextReveal";
 export default function Hero() {
   return (
     <div
-      className="flex min-h-[500px] bg-blue-200 text-black" // Use min-h instead of a fixed calc for more flexibility
+      className="flex min-h-[500px] text-black" // Use min-h instead of a fixed calc for more flexibility
       style={{ height: "calc(100vh - 200px)" }}
     >
       <div className="flex w-[45.833333%] shrink-0 flex-col justify-center bg-white pl-18">
@@ -29,7 +29,10 @@ export default function Hero() {
           <Button2>Book a Consultation</Button2>
         </div>
       </div>
-      <div className="grow bg-blue-200"></div>
+      <div className="grow relative bg-blue-200 overflow-visible">
+        <span><img src="Person1.png" alt="Hero Image" className=" absolute w-[20vw] top-[130px]" /></span>
+        <span><img src="Person2.png" alt="Hero Image" className=" absolute w-[20vw] left-[250px]" /></span>
+      </div>
     </div>
   );
 }

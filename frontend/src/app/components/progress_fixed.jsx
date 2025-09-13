@@ -301,7 +301,7 @@ export default function ProgressFixed() {
           ref={svgRef}
           id="Layer_1"
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1380 1600"
+          viewBox="0 0 1380 1450"
           preserveAspectRatio="xMidYMid meet"
           className="mt-60 overflow-visible w-full h-auto"
         >
@@ -465,7 +465,7 @@ export default function ProgressFixed() {
           version="1.0"
           preserveAspectRatio="xMidYMid meet"
           zoomAndPan="magnify"
-          className="overflow-visible -mt-85 w-full h-auto"
+          className="overflow-visible -mt-[15vw] w-full h-auto"
           viewBox="0 0 1000 1200"
           ref={svgRef2}
         >

@@ -18,9 +18,9 @@ export default function Hero2() {
         </svg>
       
       <div className="h-[80vh] bg-[#F9F9F9] rounded-b-[70px] flex">
-        <div className="flex-col w-[60vw]">
-          <img src="/logo.png" alt="Logo" className="w-[275px] ml-37" />
-          <div className="flex-col w-[41.5vw] ml-50 mt-20 border-1">
+        <div className="flex flex-col w-[60vw] relative ">
+          <img src="/logo.png" alt="Logo" className="w-[275px] ml-[7vw]" />
+          <div className="absolute w-[41.5vw]  mt-20 border-1 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
             <TextReveal>
               <div className="font-serif text-[clamp(0.01rem,2.5vw,3rem)] leading-[1.14] tracking-[-0.065em] text-black">
               <span className="block"><span className="text-[#009938] italic ">Spain Academy</span> is

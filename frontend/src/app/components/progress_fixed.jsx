@@ -429,7 +429,7 @@ export default function ProgressFixed() {
           />
           <foreignObject
             ref={text1ref}
-            width="380"
+            width="400"
             height="160"
             className="overflow-visible"
           >

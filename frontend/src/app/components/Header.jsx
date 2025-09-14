@@ -16,7 +16,7 @@ export default function Header() {
           <img
             src="/logo.png"
             alt="Logo"
-            className="md:w-[193px] sm:w-[150px]"
+            className="w-[clamp(100px,10vw,200px)] "
           />
         </div>
 

@@ -1,7 +1,11 @@
+"use client";
 import "./button2.css";
+import {motion} from "motion/react"
 export default function Button2({children}) {
   return (
-    <div>
+    <motion.div whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}>
+      <div>
       <button className="style-btn2">
         <div className="style_round2"></div>
         <p className="style_title2">{children}</p>
@@ -15,5 +19,6 @@ export default function Button2({children}) {
         </div>
       </button>
     </div>
+    </motion.div>
   );
 }

@@ -252,7 +252,7 @@ export default function ProgressFixed() {
           start: "top 65%",
           end: () =>
             "+=" + (pathRef.current?.getBoundingClientRect().height || 600),
-          scrub: 0.5,
+          scrub: { delay: 0.6, ease: "power2.out" },
           markers: false,
           invalidateOnRefresh: true,
           onRefresh: () => {
@@ -331,7 +331,7 @@ export default function ProgressFixed() {
           start: "top 45%",
           end: () =>
             "+=" + (pathRef2.current?.getBoundingClientRect().height || 600),
-          scrub: 0.5,
+          scrub: { delay: 0.6, ease: "power2.out" },
           markers: false,
           invalidateOnRefresh: true,
           onRefresh: () => {

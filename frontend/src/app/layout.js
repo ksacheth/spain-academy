@@ -6,10 +6,17 @@ import {
   Inter,
   Noto_Serif,
   Public_Sans,
+  Arimo,
 } from "next/font/google";
 import "./globals.css";
 import { ReactLenis } from "lenis/react";
 import { SpeedInsights } from '@vercel/speed-insights/next';
+
+const arimo = Arimo({
+  variable: "--font-arimo",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,17 +28,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Project fonts
 const inter = Inter({
   variable: "--font-inter",
+  
   subsets: ["latin"],
   display: "swap",
 });
 
 const notoSerif = Noto_Serif({
   variable: "--font-noto-serif",
+  style: ['normal', 'italic'],
   subsets: ["latin"],
-  display: "swap",
+  // display: "swap",
 });
 
 const publicSans = Public_Sans({
@@ -49,11 +57,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${notoSerif.variable} ${publicSans.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${notoSerif.variable} ${publicSans.variable} ${arimo.variable} antialiased`}
       >
         <ReactLenis root>
           {children}
-          
         </ReactLenis>
         <Analytics />
         <SpeedInsights/>

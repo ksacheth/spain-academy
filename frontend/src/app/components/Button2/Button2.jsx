@@ -3,7 +3,7 @@ import "./button2.css";
 import {motion} from "motion/react"
 export default function Button2({children}) {
   return (
-    <motion.div whileHover={{ scale: 1.2 }}
+    <motion.div whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.8 }}>
       <div>
       <button className="style-btn2">

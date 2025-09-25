@@ -99,7 +99,7 @@ export default function Hero2() {
           <div className="basis-4/5 flex items-center justify-center px-4">
             <div className="w-full max-w-[44vw]">
               <TextReveal>
-                <div className="font-serif text-[clamp(0.01rem,2.8vw,5rem)] leading-[1.14] tracking-[-0.065em] text-black">
+                <div className="font-serif text-[clamp(0.01rem,2.8vw,5rem)] leading-[1.23] tracking-[-0.065em] text-black">
                   <span className="block">
                     <span className="text-[#009938] italic">Spain Academy</span>{" "}
                     is your all-in-one
@@ -110,7 +110,7 @@ export default function Hero2() {
               </TextReveal>
 
               <TextReveal>
-                <div className="mt-10 font-serif text-[clamp(0.01rem,2.7vw,5rem)] leading-[1.14] tracking-[-0.065em] text-black">
+                <div className="mt-10 font-serif text-[clamp(0.01rem,2.7vw,5rem)] leading-[1.23] tracking-[-0.065em] text-black">
                   <span className="text-[#959595]">
                     From <span className="italic">visas</span> and{" "}
                     <span className="italic">university admissions</span>

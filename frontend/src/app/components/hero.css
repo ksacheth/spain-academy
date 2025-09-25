@@ -1,4 +1,0 @@
-@import "tailwindcss";
-.title-large{
-    @apply tracking-[-0.045em] leading-[1.14] text-[65px] font-serif;
-}

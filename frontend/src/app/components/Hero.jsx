@@ -8,7 +8,7 @@ export default function Hero() {
     >
       <div className="flex w-[45.8%] shrink-0 flex-col justify-center bg-white pl-18  ">
         <div className="w-[92%] max-w-[943.8464px] mx-auto  ">
-          <div className="font-serif leading-[1.14] tracking-[-0.045em] text-[clamp(1.875rem,4.5vw,108px)] text-[#009839]  ">
+          <div className="font-serif leading-[1.25] tracking-[-0.045em] text-[clamp(1.875rem,4.5vw,108px)] text-[#009839]  ">
             <TextReveal>
               <h1>
                 The only Study-in- <span className="italic">Spain</span> program

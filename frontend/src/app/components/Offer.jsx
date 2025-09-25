@@ -1,6 +1,6 @@
 export default function Offer() {
   return (
-    <div className="h-[100svh]">
+    <div className=" w-full">
       <div className="flex justify-center font-arimo font-bold text-[3.5rem] leading-[1.14] tracking-[-0.045em] mt-[12rem]">
         What We
         <span className="text-[#009938] italic font-noto-serif font-semibold">
@@ -8,7 +8,7 @@ export default function Offer() {
           &nbsp;Offer
         </span>
       </div>
-      <div className="flex flex-col justify-center mt-[3rem] items-center gap-10">
+      <div className="flex flex-col justify-center mt-[3rem] items-center gap-10 mb-[10rem]">
         <div className="relative w-fit ">
           {/* Background shadow layer */}
           <div className="absolute inset-0  rounded-2xl bg-red-200"></div>
@@ -26,7 +26,6 @@ export default function Offer() {
           </div>
         </div>
 
-
         <div className="relative w-[32rem]">
           {/* Background shadow layer */}
           <div className="absolute inset-0  translate-x-4 rounded-2xl bg-[#FEE69E] h-[8rem]"></div>
@@ -36,13 +35,13 @@ export default function Offer() {
             <div>
               <h2 className="text-lg font-bold">The Boosters</h2>
               <p className="text-sm mt-1 text-red-100">
-                What takes you from surviving to thriving (mentorship, simulations, and real-world prep )
+                What takes you from surviving to thriving (mentorship,
+                simulations, and real-world prep )
               </p>
             </div>
             <span className="text-2xl font-light">+</span>
           </div>
         </div>
-
 
         <div className="relative w-[25rem]">
           {/* Background shadow layer */}
@@ -59,7 +58,6 @@ export default function Offer() {
             <span className="text-2xl font-light">+</span>
           </div>
         </div>
-
 
         <div className="relative w-[25rem] -mt-8 -z-1">
           {/* Background shadow layer */}

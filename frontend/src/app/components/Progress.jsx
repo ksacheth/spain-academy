@@ -31,7 +31,6 @@ export default function Progress() {
   const dotRef1 = useRef(null);
   const dotRef2 = useRef(null);
 
-
   const dot1LabelRef = useRef(null); // NEW: label ref for dot1
   const dot2LabelRef = useRef(null);
 
@@ -228,15 +227,85 @@ export default function Progress() {
   }, []);
 
   return (
-    <div ref={root} className="bg-[#F9F9F9] rounded-[100px] py-20 mt-20">
-      <div className="bg-transparent h-100%">
+    <div
+      ref={root}
+      className="bg-[#F9F9F9] rounded-[100px] py-[10rem] mt-20 border-2"
+    >
+      <div className="bg-transparent h-100% relative">
+        <div className=" border-2 absolute -top-1/15 right-2/9">
+          <div className="text-right flex-col ">
+            <TextReveal>
+              <div className="font-serif xl:text-[2.8rem] lg:text-[2.3rem] md:text-[1.8rem] sm:text-[1.5rem] text-[1rem] mr-1 text-[#3c3c3c]">
+                Pre-<span className="italic">Arrival</span>
+              </div>
+            </TextReveal>
+            <TextReveal>
+              <div className="mt-3 pr-1 tracking-[0.03em] leading-[1.18] text-right xl:text-[1.5rem] lg:text-[1.3rem] md:text-[1rem] sm:text-[0.9rem] text-[0.5rem] font-sans">
+                <span className="block">Pre-departure Support -</span>
+                <span className="block">Student Visa Assistance -</span>
+                <span className="block">Health Insurance Support -</span>
+                <span className="block">Accommodation Arrangements -</span>
+              </div>
+            </TextReveal>
+          </div>
+        </div>
+        <div className=" border-2 absolute top-2/7 left-1/6">
+          <div className="text-left flex-col">
+            <TextReveal>
+              <div className="font-serif xl:text-[2.8rem] lg:text-[2.3rem] md:text-[1.8rem] sm:text-[1.5rem] text-[1rem] text-[#3c3c3c]">
+                Post-<span className="italic">Arrival</span>
+              </div>
+            </TextReveal>
+            <TextReveal>
+              <div className="mt-3 tracking-[0.03em] leading-[1.18] text-left xl:text-[1.5rem] lg:text-[1.3rem] md:text-[1rem] sm:text-[0.9rem] text-[0.5rem] pr-10 font-sans">
+                <span className="block">- Airport pick-up</span>
+                <span className="block">
+                  - Welcoming Orientation: City tour Cultural Guidance
+                </span>
+                <span className="block">- Bank Account Setup</span>
+                <span className="block">
+                  - Mobile Data & Transportation Card Assistance
+                </span>
+                <span className="block">- Residence Permit Application</span>
+              </div>
+            </TextReveal>
+          </div>
+        </div>
+        <div className=" border-2 absolute bottom-1/22 right-1/6">
+          <div className="text-right flex-col tracking-[0.035em] leading-[1.07]">
+            <TextReveal>
+              <div className="font-serif xl:text-[2.6rem] lg:text-[2.1rem] md:text-[1.7rem] sm:text-[1.3rem] text-[1rem] text-[#3c3c3c]">
+                <span className="block"><span className="italic">Academic</span> &{" "}
+                <span className="italic">Personal</span> Support</span> During the
+                Program
+              </div>
+            </TextReveal>
+            <TextReveal>
+              <div className="mt-3 tracking-[0.03em] leading-[1.18] text-right xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem] sm:text-[0.6rem] text-[0.5rem] font-sans">
+                <span className="block">Emergency Contacts -</span>
+                <span className="block">Spanish Language Course -</span>
+                <span className="block">University Admission -</span>
+                <span className="block">University Academic Preparation -</span>
+                <span className="block">One-on-one Academic Counseling -</span>
+                <span className="block">
+                  Career Guidance & Internship Opportunities -
+                </span>
+                <span className="block">Psychological Counselling -</span>
+                <span className="block">
+                  Seminars with Professors and Industry Professionals -
+                </span>
+                <span className="block">Food & Health Advice -</span>
+              </div>
+            </TextReveal>
+          </div>
+        </div>
         <svg
           ref={svgRef}
           id="Layer_1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1380 1450"
           preserveAspectRatio="xMidYMid meet"
-          className="mt-60 overflow-visible w-full h-auto"
+          className="overflow-visible w-full h-auto"
         >
           <path
             ref={pathRef}
@@ -297,7 +366,7 @@ export default function Progress() {
             height="208"
             style={{ pointerEvents: "none" }}
           />
-          <foreignObject
+          {/* <foreignObject
             ref={text1ref}
             width="400"
             height="160"
@@ -320,8 +389,8 @@ export default function Progress() {
                 </TextReveal>
               </div>
             </div>
-          </foreignObject>
-          <foreignObject
+          </foreignObject> */}
+          {/* <foreignObject
             ref={text2ref}
             width="500"
             height="160"
@@ -351,8 +420,8 @@ export default function Progress() {
                 </TextReveal>
               </div>
             </div>
-          </foreignObject>
-          <foreignObject
+          </foreignObject> */}
+          {/* <foreignObject
             ref={text3ref}
             width="700"
             height="160"
@@ -390,16 +459,37 @@ export default function Progress() {
                 </TextReveal>
               </div>
             </div>
-          </foreignObject>
+          </foreignObject> */}
         </svg>
       </div>
-      <div className="bg-transparent h-100%">
+      <div className="bg-transparent h-100% border-2 border-red-400 relative">
+        <div className=" border-2 absolute bottom-3/8 left-1/7 ">
+          <div className="text-left flex-col">
+            <TextReveal>
+              <div className="font-serif xl:text-[2.8rem] lg:text-[2.3rem] md:text-[1.8rem] sm:text-[1.5rem] text-[1rem] text-[#3c3c3c]">
+                <span className="block">
+                  Post-<span className="italic">Program</span> &
+                </span>{" "}
+                <span className="block -mt-[0.6rem]">Alumni Support</span>
+              </div>
+            </TextReveal>
+            <TextReveal>
+              <div className="mt-5 tracking-[0.03em] leading-[1.18] text-left xl:text-[1.5rem] lg:text-[1.3rem] md:text-[1rem] sm:text-[0.9rem] text-[0.5rem] pr-10 font-sans">
+                <span className="block">- Continued Legal Support</span>
+                <span className="block">- Erasmus & Study Abroad Guidance</span>
+                <span className="block">
+                  - Alumni Network & Career Support{" "}
+                </span>
+              </div>
+            </TextReveal>
+          </div>
+        </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.0"
           preserveAspectRatio="xMidYMid meet"
           zoomAndPan="magnify"
-          className="overflow-visible -mt-[15vw] w-full h-auto"
+          className="overflow-visible -mt-[15vw] w-full"
           viewBox="0 0 1000 1200"
           ref={svgRef2}
         >
@@ -458,7 +548,7 @@ export default function Progress() {
             preserveAspectRatio="xMidYMid meet"
             style={{ pointerEvents: "none" }}
           />
-          <foreignObject
+          {/* <foreignObject
             ref={text4ref}
             width="330"
             height="160"
@@ -485,7 +575,7 @@ export default function Progress() {
                 </TextReveal>
               </div>
             </div>
-          </foreignObject>
+          </foreignObject> */}
         </svg>
       </div>
     </div>

@@ -30,7 +30,7 @@ export default function SmoothScrollProvider({ children }) {
     ScrollTrigger.scrollerProxy(document.documentElement, {
       scrollTop(value) {
         if (value != null) {
-          lenis.scrollTo(value, { immediate: false });
+          lenis.scrollTo(value, { immediate: true });
         }
         return lenis.scroll;
       },

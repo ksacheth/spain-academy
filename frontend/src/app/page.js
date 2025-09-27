@@ -5,6 +5,7 @@ import Hero2 from "./components/Hero2";
 import Progress from "./components/Progress";
 import Offer from "./components/Offer";
 import Questions from "./components/Questions";
+import Logo from "./components/Logo";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Headers />
       <Hero />
       <Hero2 />
+      <Logo />
       <Offer />
       <Progress/>
       <Questions />

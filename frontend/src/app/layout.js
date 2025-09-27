@@ -1,5 +1,5 @@
 // app/layout.jsx
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 import {
   Geist,
   Geist_Mono,
@@ -10,7 +10,8 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import { ReactLenis } from "lenis/react";
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import SmoothScrollProvider from "./components/LenisProvider";
 
 const arimo = Arimo({
   variable: "--font-arimo",
@@ -30,14 +31,14 @@ const geistMono = Geist_Mono({
 
 const inter = Inter({
   variable: "--font-inter",
-  
+
   subsets: ["latin"],
   display: "swap",
 });
 
 const notoSerif = Noto_Serif({
   variable: "--font-noto-serif",
-  style: ['normal', 'italic'],
+  style: ["normal", "italic"],
   subsets: ["latin"],
   // display: "swap",
 });
@@ -59,11 +60,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${notoSerif.variable} ${publicSans.variable} ${arimo.variable} antialiased`}
       >
-        <ReactLenis root>
-          {children}
-        </ReactLenis>
+        <SmoothScrollProvider>{children}</SmoothScrollProvider>
         <Analytics />
-        <SpeedInsights/>
+        <SpeedInsights />
       </body>
     </html>
   );

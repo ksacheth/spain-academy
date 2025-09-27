@@ -1,6 +1,7 @@
 "use client";
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
+import Lenis from "lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import Button2 from "./Button2/Button2";
@@ -29,6 +30,7 @@ export default function Progress() {
   const text4ref = useRef(null);
   const dotRef1 = useRef(null);
   const dotRef2 = useRef(null);
+
 
   const dot1LabelRef = useRef(null); // NEW: label ref for dot1
   const dot2LabelRef = useRef(null);

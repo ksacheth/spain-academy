@@ -1,70 +1,60 @@
-// // app/components/LenisProvider.jsx
-// "use client";
+"use client";
 
-// import React, {
-//   createContext,
-//   useContext,
-//   useState,
-//   useEffect,
-//   useCallback,
-// } from "react";
-// import { ReactLenis } from "lenis/react"; // you had this import already
+import { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// const DEFAULTS = {
-//   lerp: 0.03, // your initial inertia
-//   wheelMultiplier: 1,
-//   syncTouch: true,
-//   syncTouchLerp: 0.075,
-//   touchInertiaExponent: 1.7,
-// };
+gsap.registerPlugin(ScrollTrigger);
 
-// const LenisOptionsContext = createContext({
-//   options: DEFAULTS,
-//   setOptions: (o) => {},
-//   updateLerp: (v) => {},
-// });
+export default function SmoothScrollProvider({ children }) {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.1,
+      lerp: 0.1,
+      smoothWheel: true,
+      smoothTouch: false,
+    });
 
-// export function useLenisOptions() {
-//   return useContext(LenisOptionsContext);
-// }
+    // Keep a stable tick function reference for cleanup
+    const onTick = (time) => {
+      lenis.raf(time * 1000); // gsap gives seconds; Lenis expects ms
+    };
+    gsap.ticker.add(onTick);
 
-// /**
-//  * LenisProvider
-//  * - initialOptions: merge with defaults
-//  * - when options change, we increment `instanceKey` to force ReactLenis remount,
-//  *   guaranteeing a fresh Lenis instance with new settings.
-//  */
-// export default function LenisProvider({ children, initialOptions = {} }) {
-//   const [options, setOptions] = useState({ ...DEFAULTS, ...initialOptions });
-//   const [instanceKey, setInstanceKey] = useState(0);
+    // Update ScrollTrigger on each Lenis scroll
+    const onLenisScroll = () => ScrollTrigger.update();
+    lenis.on("scroll", onLenisScroll);
 
-//   // Whenever options change, bump instanceKey to force ReactLenis remount
-//   useEffect(() => {
-//     // small debounce guard could be added, but immediate recreate is safest
-//     setInstanceKey((k) => k + 1);
-//   }, [options]);
+    // Wire ScrollTrigger to use Lenis
+    ScrollTrigger.scrollerProxy(document.documentElement, {
+      scrollTop(value) {
+        if (value != null) {
+          lenis.scrollTo(value, { immediate: false });
+        }
+        return lenis.scroll;
+      },
+      getBoundingClientRect() {
+        return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+      },
+      pinType: document.documentElement.style.transform ? "transform" : "fixed",
+    });
 
-//   const setOptionsSafe = useCallback((next) => {
-//     setOptions((prev) => ({ ...prev, ...next }));
-//   }, []);
+    const onResize = () => ScrollTrigger.refresh();
+    window.addEventListener("resize", onResize);
 
-//   const updateLerp = useCallback(
-//     (lerpValue) => {
-//       // sanitize (optional)
-//       if (typeof lerpValue !== "number") return;
-//       setOptionsSafe({ lerp: lerpValue });
-//     },
-//     [setOptionsSafe]
-//   );
+    // Initial refresh after mount
+    setTimeout(() => ScrollTrigger.refresh(), 0);
 
-//   return (
-//     <LenisOptionsContext.Provider
-//       value={{ options, setOptions: setOptionsSafe, updateLerp }}
-//     >
-//       {/* key forces ReactLenis to unmount + remount on options change so a new Lenis instance is created */}
-//       <ReactLenis key={instanceKey} root options={options}>
-//         {children}
-//       </ReactLenis>
-//     </LenisOptionsContext.Provider>
-//   );
-// }
+    return () => {
+      window.removeEventListener("resize", onResize);
+      gsap.ticker.remove(onTick);
+      lenis.off("scroll", onLenisScroll);
+      lenis.destroy();
+      // kill all triggers created so far
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+    };
+  }, []);
+
+  return <>{children}</>;
+}

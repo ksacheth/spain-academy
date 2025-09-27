@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html,
+body {
+  scroll-behavior: auto !important;
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -13,15 +17,13 @@
   --font-noto-serif: var(--font-noto-serif);
 }
 
-
 body {
   background: var(--background);
   color: var(--foreground);
   margin: 0;
   /* Default to Inter; fall back to system sans */
   font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system,
-    Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
-    "Segoe UI Emoji";
+    Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 /* Make images scale responsively within their containers */

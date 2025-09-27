@@ -229,7 +229,7 @@ export default function Progress() {
   return (
     <div
       ref={root}
-      className="bg-[#F9F9F9] rounded-[100px] py-[10rem] mt-20 border-2"
+      className="bg-[#F9F9F9] rounded-[100px] pt-[10rem] mt-20 border-2"
     >
       <div className="bg-transparent h-100% relative">
         <div className=" border-2 absolute -top-1/15 right-2/9">

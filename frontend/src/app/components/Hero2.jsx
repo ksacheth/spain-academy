@@ -19,7 +19,7 @@ export default function Hero2() {
       </svg>
 
       {/* Hero */}
-      <div className="bg-[#F9F9F9] rounded-b-[70px] flex   h-full ">
+      <div className="bg-[#F9F9F9] rounded-b-[70px] flex h-full ">
         {/* LEFT: text */}
         <div className="flex w-[65vw] justify-center mb-[8rem] ">
           <div className="flex flex-col gap-[4rem]">

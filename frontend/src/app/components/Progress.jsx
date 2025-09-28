@@ -229,10 +229,10 @@ export default function Progress() {
   return (
     <div
       ref={root}
-      className="bg-[#F9F9F9] rounded-[100px] pt-[10rem] mt-20 border-2"
+      className="bg-[#F9F9F9] rounded-[100px] pt-[10rem] mt-20 "
     >
       <div className="bg-transparent h-100% relative">
-        <div className=" border-2 absolute -top-1/15 right-2/9">
+        <div className=" absolute -top-1/15 right-2/9">
           <div className="text-right flex-col ">
             <TextReveal>
               <div className="font-serif xl:text-[2.8rem] lg:text-[2.3rem] md:text-[1.8rem] sm:text-[1.5rem] text-[1rem] mr-1 text-[#3c3c3c]">
@@ -249,7 +249,7 @@ export default function Progress() {
             </TextReveal>
           </div>
         </div>
-        <div className=" border-2 absolute top-2/7 left-1/6">
+        <div className="absolute top-2/7 left-1/6">
           <div className="text-left flex-col">
             <TextReveal>
               <div className="font-serif xl:text-[2.8rem] lg:text-[2.3rem] md:text-[1.8rem] sm:text-[1.5rem] text-[1rem] text-[#3c3c3c]">
@@ -271,8 +271,8 @@ export default function Progress() {
             </TextReveal>
           </div>
         </div>
-        <div className=" border-2 absolute bottom-1/22 right-1/6">
-          <div className="text-right flex-col tracking-[0.035em] leading-[1.07]">
+        <div className="absolute bottom-1/22 right-1/6">
+          <div className="text-right flex-col tracking-[0.035em] leading-[1.25]">
             <TextReveal>
               <div className="font-serif xl:text-[2.6rem] lg:text-[2.1rem] md:text-[1.7rem] sm:text-[1.3rem] text-[1rem] text-[#3c3c3c]">
                 <span className="block"><span className="italic">Academic</span> &{" "}
@@ -303,7 +303,7 @@ export default function Progress() {
           ref={svgRef}
           id="Layer_1"
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1380 1450"
+          viewBox="0 0 1370 1450"
           preserveAspectRatio="xMidYMid meet"
           className="overflow-visible w-full h-auto"
         >
@@ -462,8 +462,8 @@ export default function Progress() {
           </foreignObject> */}
         </svg>
       </div>
-      <div className="bg-transparent h-100% border-2 border-red-400 relative">
-        <div className=" border-2 absolute bottom-3/8 left-1/7 ">
+      <div className="bg-transparent h-100%  relative">
+        <div className="absolute bottom-3/8 left-1/7 ">
           <div className="text-left flex-col">
             <TextReveal>
               <div className="font-serif xl:text-[2.8rem] lg:text-[2.3rem] md:text-[1.8rem] sm:text-[1.5rem] text-[1rem] text-[#3c3c3c]">

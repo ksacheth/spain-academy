@@ -3,13 +3,13 @@ import { motion } from "motion/react";
 
 export default function Hero2() {
   return (
-    <div className=" relative  border-b-fuchsia-700 z-10">
+    <div className=" relative z-10">
       <svg
         id="Layer_1"
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 850 120"
-        className="-mt-[12vw]"
+        className="-mt-[10vw]"
         aria-hidden="true"
       >
         <path
@@ -31,7 +31,7 @@ export default function Hero2() {
               <TextReveal>
                 <div className="font-serif text-[2.5rem] leading-[1.23] tracking-[-0.065em] text-black">
                   <span className="block">
-                    <span className="text-[#009938] italic">Spain Academy</span>{" "}
+                    <span className="text-VividGreen italic">Spain Academy</span>{" "}
                     is your all-in-one
                   </span>{" "}
                   onboarding kit for life in{" "}
@@ -59,7 +59,7 @@ export default function Hero2() {
                   </span>
                   <span className="block">
                     everything you need to{" "}
-                    <span className="text-[#009938] italic">thrive</span>.
+                    <span className="text-VividGreen italic">thrive</span>.
                   </span>
                 </div>
               </TextReveal>

@@ -17,6 +17,13 @@ body {
   --font-noto-serif: var(--font-noto-serif);
 }
 
+@theme {
+  --color-VividGreen: #049838;
+  --color-VividRed: #A9161C;
+  --color-VividYellow: #FCBE07;
+  --color-VividBlack: #2A2A2A;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

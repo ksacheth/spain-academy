@@ -1,12 +1,13 @@
+"use client";
 import Button2 from "./Button2/Button2";
 import TextReveal from "./TextReveal";
 
 export default function Hero() {
   return (
-    <div className="flex h-[clamp(400px,50vw,1000px)] text-black mx-auto border-2 border-red-800">
-      <div className="flex flex-col w-[45.8%] shrink-0 items-center justify-center bg-white border-2 border-red-600 relative">
-        <div className="absolute  max-w-[943.8464px] border-2 border-red-400">
-          <div className="font-serif leading-[1.25] tracking-[-0.045em] 2xl:text-[5rem] xl:text-[4rem] lg:text-[3.2rem] md:text-[2.5rem] text-[#009839]">
+    <div className="flex h-[clamp(400px,48vw,1000px)] text-black mx-auto ">
+      <div className="flex flex-col w-[45.8%] shrink-0 items-center justify-center bg-white  relative">
+        <div className="absolute  max-w-[943.8464px]">
+          <div className="font-serif leading-[1.25] tracking-[-0.045em] 2xl:text-[5rem] xl:text-[4rem] lg:text-[3.2rem] md:text-[2.5rem] text-VividGreen">
             <TextReveal>
               <h1 className="">
                 <span className="block">The only Study-in-</span>{" "}
@@ -23,17 +24,17 @@ export default function Hero() {
                 Any questions big or small, We are here to listen, support,
               </span>{" "}
               and guide. So, what are you{" "}
-              <span className="text-[#009839] italic">waiting</span> for?"
+              <span className="text-VividGreen italic">waiting</span> for?"
             </div>
           </TextReveal>
 
-          <div className="absolute w-fit ml-5 mt-[2rem]">
+          <div className="block ml-5 mt-[2rem]">
             <Button2>Book a Consultation</Button2>
           </div>
         </div>
       </div>
-      <div className="grow bg-transparent overflow-visible z-10 border-2 border-red-600">
-        <div className="mx-auto my-auto  -4 max-w-[1214px] relative h-full border-2 border-red-400">
+      <div className="grow bg-transparent overflow-visible z-10 ">
+        <div className="mx-auto my-auto  -4 max-w-[1214px] relative h-full ">
           <span>
             <img
               src="Person1.png"

@@ -5,7 +5,7 @@ export default function Offer() {
     <div className="w-full">
       <div className="flex justify-center font-arimo font-bold text-[3.5rem] leading-[1.14] tracking-[-0.045em] mt-[12rem]">
         What We
-        <span className="text-[#009938] italic font-noto-serif font-semibold">
+        <span className="text-VividGreen italic font-noto-serif font-semibold">
           {" "}
           &nbsp;Offer
         </span>
@@ -16,11 +16,11 @@ export default function Offer() {
         {/* Red card - expandable */}
         <div className="relative w-[30rem] flex flex-col group">
           {/* Background shadow layer */}
-          <div className="absolute inset-0 rounded-2xl bg-red-200 translate-y-2
+          <div className="absolute inset-0 rounded-2xl bg-[#EBC6C5] translate-y-2
           group-hover:rotate-0 group-focus-within:rotate-0" />
 
           {/* Main card */}
-          <div className="relative flex-col justify-between items-start rounded-2xl bg-red-700 px-6 py-5 text-white w-full rotate-[2deg] translate-y-5 shadow-lg transition-all duration-400 ease-in-out
+          <div className="relative flex-col justify-between items-start rounded-2xl bg-VividRed px-6 py-5 text-white w-full rotate-[2deg] translate-y-5 shadow-lg transition-all duration-400 ease-in-out
           group-hover:rotate-0 group-focus-within:rotate-0">
             {/* header */}
             <div className="min-w-0">
@@ -76,10 +76,10 @@ export default function Offer() {
         {/* Yellow card */}
         <div className="relative w-[32rem] flex flex-col group text-white">
           {/* Background shadow layer */}
-          <div className="absolute inset-0  translate-x-4 rounded-2xl bg-[#FEE69E] group-hover:rotate-0 group-focus-within:rotate-0" />
+          <div className="absolute inset-0  translate-x-4 rounded-2xl bg-[#FEE5B0] group-hover:rotate-0 group-focus-within:rotate-0" />
 
           {/* Main card */}
-          <div className="relative flex-col items-start  justify-between rounded-2xl bg-[#FDBD09] px-6 py-5   rotate-[-3deg] shadow-lg transition-all duration-400 ease-in-out
+          <div className="relative flex-col items-start  justify-between rounded-2xl bg-VividYellow px-6 py-5   rotate-[-3deg] shadow-lg transition-all duration-400 ease-in-out
               group-hover:rotate-0 group-focus-within:rotate-0">
             <div>
               <h2 className="text-lg font-bold">The Boosters</h2>
@@ -137,10 +137,10 @@ export default function Offer() {
         {/* Green card */}
         <div className="relative w-[25rem] flex flex-col group text-white">
           {/* Background shadow layer */}
-          <div className="absolute inset-0  rounded-2xl -translate-x-2 bg-[#A6DCBA] rotate-[-3deg] transition-all duration-400 ease-in-out group-hover:rotate-0 group-focus-within:rotate-0"></div>
+          <div className="absolute inset-0  rounded-2xl -translate-x-2 bg-[#B5DCBB] rotate-[-3deg] transition-all duration-400 ease-in-out group-hover:rotate-0 group-focus-within:rotate-0"></div>
 
           {/* Main card */}
-          <div className="relative flex-col items-start justify-between rounded-2xl bg-[#009938] px-6 py-5  rotate-[2deg] shadow-lg transition-all duration-400 ease-in-out
+          <div className="relative flex-col items-start justify-between rounded-2xl bg-VividGreen px-6 py-5  rotate-[2deg] shadow-lg transition-all duration-400 ease-in-out
           group-hover:rotate-0 group-focus-within:rotate-0">
             <div>
               <h2 className="text-lg font-bold">Future-Proof Tools</h2>
@@ -192,7 +192,7 @@ export default function Offer() {
           <div className="absolute inset-0  rounded-2xl translate-x-3 translate-y-2 bg-[#B2B2B2] transition-all duration-400 ease-in-out group-hover:rotate-0 group-focus-within:rotate-0"></div>
 
           {/* Main card */}
-          <div className="relative flex-col items-start justify-between rounded-2xl bg-[#2A2A2A] px-6 py-5  -rotate-[3deg] shadow-lg transition-all duration-400 ease-in-out
+          <div className="relative flex-col items-start justify-between rounded-2xl bg-VividBlack px-6 py-5  -rotate-[3deg] shadow-lg transition-all duration-400 ease-in-out
           group-hover:rotate-0 group-focus-within:rotate-0">
             <div>
               <h2 className="text-lg font-bold">Real Life in Spain</h2>

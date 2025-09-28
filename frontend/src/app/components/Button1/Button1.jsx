@@ -2,9 +2,7 @@ import "./button1.css";
 import {motion} from "motion/react"
 export default function Button1({children}) {
   return (
-    <motion.div whileHover={{ scale: 1.08 }}
-            whileTap={{ scale: 0.8 }}>
-       <div>
+    <motion.div whileHover={{ scale: 1.08 }}>
       <button className="style-btn">
         <div className="style_round"></div>
         <p className="style_title">{children}</p>
@@ -17,7 +15,6 @@ export default function Button1({children}) {
           </svg>
         </div>
       </button>
-    </div>
     </motion.div>
   );
 }

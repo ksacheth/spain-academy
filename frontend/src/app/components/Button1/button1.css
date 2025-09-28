@@ -35,7 +35,7 @@
 
 .style-btn:hover .style_round {
   transform: scale(25);
-  background-color: #009839;
+  background-color: var(--color-VividGreen);
 }
 
 .style-btn:hover .style_title {

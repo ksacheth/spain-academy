@@ -55,14 +55,23 @@ export default function TextReveal({ children, animateOnScroll = true, delay = 0
         lines.current.push(...split.lines);
       });
 
-      gsap.set(lines.current, { y: "100%" });
+      gsap.set(lines.current, { y: "100%", autoAlpha: 0 });
 
       const animationProps = {
         y: "0%",
+        autoAlpha: 1,
         duration: 1,
         stagger: 0.1,
         ease: "power4.out",
         delay: delay,
+        onStart: () => {
+          if (containerRef.current) {
+            containerRef.current.style.visibility = "visible";
+          }
+          elementRefs.current.forEach((element) => {
+            element.style.visibility = "visible";
+          });
+        },
       };
 
       if (animateOnScroll) {
@@ -90,11 +99,24 @@ export default function TextReveal({ children, animateOnScroll = true, delay = 0
   );
 
   if (React.Children.count(children) === 1) {
-    return React.cloneElement(children, { ref: containerRef });
+    const onlyChild = React.Children.only(children);
+    const nextStyle = {
+      ...(onlyChild.props?.style || {}),
+      visibility: "hidden",
+    };
+
+    return React.cloneElement(onlyChild, {
+      ref: containerRef,
+      style: nextStyle,
+    });
   }
 
   return (
-    <div ref={containerRef} data-copy-wrapper="true">
+    <div
+      ref={containerRef}
+      data-copy-wrapper="true"
+      style={{ visibility: "hidden" }}
+    >
       {children}
     </div>
   );

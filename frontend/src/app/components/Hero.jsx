@@ -41,7 +41,7 @@ export default function Hero() {
             whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 100 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            <img src="Person1.png" alt="Hero Image" className="w-full" />
+            <img src="Person1.webp" alt="Hero Image" className="w-full" />
           </motion.div>
 
           <motion.div
@@ -49,7 +49,7 @@ export default function Hero() {
             whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 100 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            <img src="Person2.png" alt="Hero Image" className="w-full" />
+            <img src="Person2.webp" alt="Hero Image" className="w-full" />
           </motion.div>
 
           <motion.div
@@ -57,7 +57,7 @@ export default function Hero() {
             whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 100 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            <img src="Person3.png" alt="Hero Image" className="w-full" />
+            <img src="Person3.webp" alt="Hero Image" className="w-full" />
           </motion.div>
         </div>
       </div>

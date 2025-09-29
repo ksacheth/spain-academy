@@ -70,19 +70,19 @@ export default function Hero2() {
         {/* RIGHT: images */}
         <div className="relative overflow-visible w-[35vw]  ">
           <img
-            src="/green.png"
+            src="/green.webp"
             alt=""
             className="absolute top-1/2 -translate-y-1/2 left-0 w-[12rem] -rotate-18"
             aria-hidden="true"
           />
           <img
-            src="/yellow.png"
+            src="/yellow.webp"
             alt=""
             className="absolute top-0 -translate-y-2/5 left-full -translate-x-4/5 w-[12rem] rotate-18 "
             aria-hidden="true"
           />
           <img
-            src="/red.png"
+            src="/red.webp"
             alt=""
             className="absolute w-[14rem] bottom-0 left-full -translate-x-1/2"
             aria-hidden="true"

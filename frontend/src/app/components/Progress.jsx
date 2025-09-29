@@ -332,35 +332,35 @@ export default function Progress() {
           </g>
           <image
             ref={img1Ref}
-            href="/1.png"
+            href="/1.webp"
             width="300"
             height="300"
             style={{ pointerEvents: "none" }}
           />
           <image
             ref={img2Ref}
-            href="/2.png"
+            href="/2.webp"
             width="440"
             height="415"
             style={{ pointerEvents: "none" }}
           />
           <image
             ref={img3Ref}
-            href="/3.png"
+            href="/3.webp"
             width="215"
             height="290"
             style={{ pointerEvents: "none" }}
           />
           <image
             ref={img4Ref}
-            href="/4.png"
+            href="/4.webp"
             width="750"
             height="450"
             style={{ pointerEvents: "none" }}
           />
           <image
             ref={img5Ref}
-            href="/5.png"
+            href="/5.webp"
             width="127"
             height="208"
             style={{ pointerEvents: "none" }}
@@ -520,7 +520,7 @@ export default function Progress() {
 
           <image
             ref={img6Ref}
-            href="/6.png"
+            href="/6.webp"
             width="180"
             height="180"
             preserveAspectRatio="xMidYMid meet"
@@ -536,7 +536,7 @@ export default function Progress() {
           />
           <image
             ref={img8Ref}
-            href="/8.png"
+            href="/8.webp"
             width="430"
             height="430"
             preserveAspectRatio="xMidYMid meet"
@@ -544,7 +544,7 @@ export default function Progress() {
           />
           <image
             ref={img9Ref}
-            href="/9.png"
+            href="/9.webp"
             width="220"
             height="220"
             preserveAspectRatio="xMidYMid meet"

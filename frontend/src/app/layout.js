@@ -32,9 +32,29 @@ const publicSans = Public_Sans({
 });
 
 export const metadata = {
-  title: "Spain Academy — The Study-in-Spain Starter Kit for Southeast Asians",
+  title: "Spain Academy - The Study-in-Spain Starter Kit for Southeast Asians",
   description:
-    "Visas, university admissions, language school, and real-life support for Southeast Asian students in Spain. From application to graduation, we’re with you all the way. Book a free consultation.",
+    "Visas, university admissions, language school, and real-life support for Southeast Asian students in Spain. From application to graduation, we're with you all the way. Book a free consultation.",
+  openGraph: {
+    title: "Spain Academy - Your StudyinSpain Starter Kit",
+    description:
+      "From visas and admissions to life admin, culture, and careers - everything you wish someone had told you, in one place.",
+    images: [
+      {
+        url: "/favicon.ico",
+        alt: 'Two students smiling on a tram in Seville; headline overlay: "From here to Spain."',
+      },
+    ],
+  },
+  keywords: [
+    "study in Spain",
+    "Southeast Asian students Spain",
+    "Spanish student visa help",
+    "Spain university admission",
+    "Spanish language course A1-B2",
+    "Erasmus SICUE Andalusia tuition",
+    "life in Spain for students",
+  ],
 };
 
 export default function RootLayout({ children }) {

@@ -143,7 +143,7 @@ export function Spain() {
         <h2 className="text-[1.25rem] text-black font-arimo">
           Still not sure about Spain?{" "}
           <span className="text-VividYellow italic font-semibold font-noto-serif">
-            Talk to us!
+            Book a free 15min call
           </span>
         </h2>
         <motion.div
@@ -151,7 +151,7 @@ export function Spain() {
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
           className="mt-[2rem]"
         >
-          <Button>Book a Consultation</Button>
+          <Button>Is Spain right for me?</Button>
         </motion.div>
       </div>
     </div>

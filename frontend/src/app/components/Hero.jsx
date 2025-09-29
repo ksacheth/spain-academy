@@ -41,29 +41,29 @@ export default function Hero() {
       </div>
       <div className="grow bg-transparent overflow-visible z-10 ">
         <div className="mx-auto my-auto  -4 max-w-[1214px] relative h-full ">
-          <motion.div
+          <motion.span
             className="absolute bottom-0 z-15 w-[clamp(100px,20vw,448px)]"
             whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 100 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
             <img src="Person1.webp" alt="Hero Image" className="w-full" />
-          </motion.div>
+          </motion.span>
 
-          <motion.div
+          <motion.span
             className="absolute bottom-0 left-[35%] z-20 w-[clamp(100px,27vw,604.8px)]"
             whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 100 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
             <img src="Person2.webp" alt="Hero Image" className="w-full" />
-          </motion.div>
+          </motion.span>
 
-          <motion.div
+          <motion.span
             className="absolute bottom-0 left-[75%] z-15 w-[clamp(100px,23vw,515.2px)]"
             whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 100 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
             <img src="Person3.webp" alt="Hero Image" className="w-full" />
-          </motion.div>
+          </motion.span>
         </div>
       </div>
     </div>

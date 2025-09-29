@@ -1,6 +1,6 @@
 // src/components/Offer.jsx
 "use client";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 // Define animation variants for the expandable content
 const contentVariants = {

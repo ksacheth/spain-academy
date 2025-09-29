@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="flex flex-col w-[45.8%] shrink-0 items-center justify-center bg-white  relative">
         <div className="absolute  max-w-[943.8464px]">
           <div className="font-serif leading-[1.25] tracking-[-0.045em] 2xl:text-[5rem] xl:text-[4rem] lg:text-[3.2rem] md:text-[2.5rem] text-VividGreen">
-            <TextReveal>
+            <TextReveal delay={0.5}>
               <h1 className="">
                 <span className="block">The only Study-in-</span>{" "}
                 <span className="block">
@@ -19,7 +19,7 @@ export default function Hero() {
               </h1>
             </TextReveal>
           </div>
-          <TextReveal>
+          <TextReveal delay={1}>
             <div className="mt-4 font-sans-alt leading-[1.25] tracking-[-0.035em] text-black 2xl:text-[1.55rem] xl:text-[1.25rem] lg:text-[1rem] md:text-[0.8rem] ">
               <span className="block">
                 Any questions big or small, We are here to listen, support,

@@ -9,7 +9,7 @@ body {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   /* Expose fonts loaded via next/font */
-  --font-sans: var(--font-inter);
+  --font-inter: var(--font-inter);
   --font-serif: var(--font-noto-serif);
   --font-mono: var(--font-geist-mono);
   --font-sans-alt: var(--font-public-sans);

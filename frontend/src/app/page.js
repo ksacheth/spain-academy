@@ -6,6 +6,7 @@ import Progress from "./components/Progress";
 import Offer from "./components/Offer";
 import Questions from "./components/Questions";
 import Logo from "./components/Logo";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Offer />
       <Progress/>
       <Questions />
+      <Footer />
     </div>
   );
 }

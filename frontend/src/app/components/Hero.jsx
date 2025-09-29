@@ -1,6 +1,7 @@
 "use client";
 import Button2 from "./Button2/Button2";
 import TextReveal from "./TextReveal";
+import { motion } from "motion/react";
 
 export default function Hero() {
   return (
@@ -35,27 +36,29 @@ export default function Hero() {
       </div>
       <div className="grow bg-transparent overflow-visible z-10 ">
         <div className="mx-auto my-auto  -4 max-w-[1214px] relative h-full ">
-          <span>
-            <img
-              src="Person1.png"
-              alt="Hero Image"
-              className=" absolute  w-[clamp(100px,20vw,448px)]  bottom-0 z-15 "
-            />
-          </span>
-          <span>
-            <img
-              src="Person2.png"
-              alt="Hero Image"
-              className=" absolute  w-[clamp(100px,27vw,604.8px)] bottom-0 left-[35%]  z-20 "
-            />
-          </span>
-          <span>
-            <img
-              src="Person3.png"
-              alt="Hero Iage"
-              className=" absolute  w-[clamp(100px,23vw,515.2px)] bottom-0 left-[75%] z-15 "
-            />
-          </span>
+          <motion.div
+            className="absolute bottom-0 z-15 w-[clamp(100px,20vw,448px)]"
+            whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 100 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          >
+            <img src="Person1.png" alt="Hero Image" className="w-full" />
+          </motion.div>
+
+          <motion.div
+            className="absolute bottom-0 left-[35%] z-20 w-[clamp(100px,27vw,604.8px)]"
+            whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 100 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          >
+            <img src="Person2.png" alt="Hero Image" className="w-full" />
+          </motion.div>
+
+          <motion.div
+            className="absolute bottom-0 left-[75%] z-15 w-[clamp(100px,23vw,515.2px)]"
+            whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 100 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          >
+            <img src="Person3.png" alt="Hero Image" className="w-full" />
+          </motion.div>
         </div>
       </div>
     </div>

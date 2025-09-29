@@ -227,11 +227,8 @@ export default function Progress() {
   }, []);
 
   return (
-    <div
-      ref={root}
-      className="bg-[#F9F9F9] rounded-[100px] pt-[10rem] mt-20 "
-    >
-      <div className="bg-transparent h-100% relative">
+    <div ref={root} className="bg-[#F9F9F9] rounded-[100px] mt-20 pt-[15vw]">
+      <div className="bg-transparent h-100% relative ">
         <div className=" absolute -top-1/15 right-2/9">
           <div className="text-right flex-col ">
             <TextReveal>
@@ -275,9 +272,11 @@ export default function Progress() {
           <div className="text-right flex-col tracking-[0.035em] leading-[1.25]">
             <TextReveal>
               <div className="font-serif xl:text-[2.6rem] lg:text-[2.1rem] md:text-[1.7rem] sm:text-[1.3rem] text-[1rem] text-[#3c3c3c]">
-                <span className="block"><span className="italic">Academic</span> &{" "}
-                <span className="italic">Personal</span> Support</span> During the
-                Program
+                <span className="block">
+                  <span className="italic">Academic</span> &{" "}
+                  <span className="italic">Personal</span> Support
+                </span>{" "}
+                During the Program
               </div>
             </TextReveal>
             <TextReveal>
@@ -463,7 +462,7 @@ export default function Progress() {
         </svg>
       </div>
       <div className="bg-transparent h-100%  relative">
-        <div className="absolute bottom-3/8 left-1/7 ">
+        <div className="absolute bottom-3/10 left-1/7 ">
           <div className="text-left flex-col">
             <TextReveal>
               <div className="font-serif xl:text-[2.8rem] lg:text-[2.3rem] md:text-[1.8rem] sm:text-[1.5rem] text-[1rem] text-[#3c3c3c]">
@@ -483,6 +482,9 @@ export default function Progress() {
               </div>
             </TextReveal>
           </div>
+        </div>
+        <div className="absolute left-1/7 bottom-2/9">
+          <Button2>Book a Consultation</Button2>
         </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"

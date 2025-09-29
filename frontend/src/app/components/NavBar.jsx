@@ -21,10 +21,13 @@ export default function Header() {
 
         <div className="flex items-center justify-between text-lg font-medium w-[50%]">
           <a href="/" className="hover:text-blue-500">
-            Home
+            The Team
           </a>
           <a href="/about" className="hover:text-blue-500">
-            About
+            Blog
+          </a>
+          <a href="#contact" className="hover:text-blue-500">
+            SA.TV
           </a>
           <a href="#contact" className="hover:text-blue-500">
             Contact

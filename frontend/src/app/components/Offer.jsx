@@ -228,9 +228,6 @@ export default function Offer() {
                   </li>
                 </ul>
               </div>
-
-              {/* bottom spacing so the reveal has room */}
-              <div className="h-3" />
             </div>
           </div>
         </div>

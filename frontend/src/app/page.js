@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Offer_v3 from "./components/Offer_v3";
 import Offer_v4 from "./components/Offer_v4";
 import Offer_v5 from "./components/Offer_v5";
+import { Spain } from "./components/Spain";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       {/* <Offer_v3 />
       <Offer_v4 />
       <Offer_v5 /> */}
+      <Spain />
       <Progress />
       <Questions />
       <Footer />

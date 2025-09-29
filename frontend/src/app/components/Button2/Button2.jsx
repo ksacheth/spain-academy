@@ -1,3 +1,4 @@
+"use client";
 import "./button2.css";
 import { motion } from "motion/react";
 export default function Button2({ children }) {

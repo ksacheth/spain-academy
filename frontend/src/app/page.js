@@ -7,6 +7,9 @@ import Offer from "./components/Offer";
 import Questions from "./components/Questions";
 import Logo from "./components/Logo";
 import Footer from "./components/Footer";
+import Offer_v3 from "./components/Offer_v3";
+import Offer_v4 from "./components/Offer_v4";
+import Offer_v5 from "./components/Offer_v5";
 
 export default function Home() {
   return (
@@ -16,7 +19,10 @@ export default function Home() {
       <Hero2 />
       <Logo />
       <Offer />
-      <Progress/>
+      {/* <Offer_v3 />
+      <Offer_v4 />
+      <Offer_v5 /> */}
+      <Progress />
       <Questions />
       <Footer />
     </div>

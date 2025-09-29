@@ -151,7 +151,9 @@ export function Spain() {
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
           className="mt-[2rem]"
         >
-          <Button>Is Spain right for me?</Button>
+          <Button scaleV={55} backgroundColor="var(--color-VividYellow)">
+            Is Spain right for me?
+          </Button>
         </motion.div>
       </div>
     </div>

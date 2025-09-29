@@ -1,4 +1,4 @@
-import LogoLoop from "./LogoLoop";
+import LogoLoop from "../templates/LogoLoop";
 
 import {
   SiReact,

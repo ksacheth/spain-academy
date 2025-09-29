@@ -1,7 +1,9 @@
 "use client";
 import { motion } from "motion/react";
 
-export default function Button({ children }) {
+export default function Button({ scaleV, backgroundColor, children }) {
+  const bgColor = backgroundColor;
+  const scaleValue = scaleV;
   return (
     <motion.button
       className="relative flex items-center gap-[15px] cursor-pointer bg-[#f9f9f9] rounded-full px-[30px] py-[10px] overflow-hidden"
@@ -12,28 +14,31 @@ export default function Button({ children }) {
         className="w-2 h-2 rounded-full bg-black z-0"
         variants={{
           initial: { scale: 1 },
-          hover: { scale: 55 , backgroundColor: "var(--color-VividYellow, #10b981)" }
+          hover: {
+            scale: scaleValue,
+            backgroundColor: bgColor,
+          },
         }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
         style={{ backgroundColor: "black" }}
       />
-      
+
       <motion.p
         className="m-0 text-lg z-10"
         variants={{
           initial: { x: 0, color: "#000" },
-          hover: { x: -25, color: "#fff" }
+          hover: { x: -25, color: "#fff" },
         }}
         transition={{ duration: 0.3, ease: "easeOut" }}
       >
         {children}
       </motion.p>
-      
+
       <motion.div
         className="absolute left-full z-10 top-4"
         variants={{
           initial: { x: 0 },
-          hover: { x: -45 }
+          hover: { x: -45 },
         }}
         transition={{ duration: 0.3, ease: "easeOut" }}
       >

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
-import Button1 from "./Button1/Button1.jsx";
+import Button from "./Button";
+import { motion } from "motion/react";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -34,9 +35,15 @@ export default function Header() {
           </a>
         </div>
 
-        <div className="block">
-          <Button1>Book</Button1>
-        </div>
+        <motion.div
+          whileHover={{ scale: 1.1, cursor: "pointer" }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          className="block"
+        >
+          <Button scaleV={25} backgroundColor="var(--color-VividGreen)">
+            Book
+          </Button>
+        </motion.div>
       </div>
     </nav>
   );

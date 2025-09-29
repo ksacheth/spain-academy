@@ -1,6 +1,6 @@
 "use client";
-import Button2 from "./Button2/Button2";
-import TextReveal from "./TextReveal";
+import Button from "./Button";
+import TextReveal from "../templates/TextReveal";
 import { motion } from "motion/react";
 
 export default function Hero() {
@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="flex flex-col w-[45.8%] shrink-0 items-center justify-center bg-white  relative">
         <div className="absolute  max-w-[943.8464px]">
           <div className="font-serif leading-[1.25] tracking-[-0.045em] 2xl:text-[5rem] xl:text-[4rem] lg:text-[3.2rem] md:text-[2.5rem] text-VividGreen">
-            <TextReveal delay={0.5}>
+            <TextReveal delay={0}>
               <h1 className="">
                 <span className="block">The only Study-in-</span>{" "}
                 <span className="block">
@@ -19,7 +19,7 @@ export default function Hero() {
               </h1>
             </TextReveal>
           </div>
-          <TextReveal delay={1}>
+          <TextReveal delay={0.5}>
             <div className="mt-4 font-sans-alt leading-[1.25] tracking-[-0.035em] text-black 2xl:text-[1.55rem] xl:text-[1.25rem] lg:text-[1rem] md:text-[0.8rem] ">
               <span className="block">
                 Any questions big or small, We are here to listen, support,
@@ -28,10 +28,15 @@ export default function Hero() {
               <span className="text-VividGreen italic">waiting</span> for?"
             </div>
           </TextReveal>
-
-          <div className="block ml-5 mt-[2rem]">
-            <Button2>Book a Consultation</Button2>
-          </div>
+          <motion.div
+            whileHover={{ scale: 1.1, cursor: "pointer" }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className="block ml-5 mt-[2rem]"
+          >
+            <Button scaleV={55} backgroundColor="var(--color-VividGreen)">
+              Book a Consultation
+            </Button>
+          </motion.div>
         </div>
       </div>
       <div className="grow bg-transparent overflow-visible z-10 ">

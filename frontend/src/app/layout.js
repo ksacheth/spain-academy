@@ -4,7 +4,7 @@ import { Inter, Noto_Serif, Public_Sans, Arimo } from "next/font/google";
 import "./globals.css";
 import { ReactLenis } from "lenis/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import SmoothScrollProvider from "./components/LenisProvider";
+import SmoothScrollProvider from "./temp/LenisProvider";
 
 const arimo = Arimo({
   variable: "--font-arimo",

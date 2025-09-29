@@ -4,8 +4,9 @@ import gsap from "gsap";
 import Lenis from "lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-import Button2 from "./Button2/Button2";
-import TextReveal from "./TextReveal";
+import { motion } from "motion/react";
+import TextReveal from "../templates/TextReveal";
+import Button from "./Button";
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
@@ -483,9 +484,15 @@ export default function Progress() {
             </TextReveal>
           </div>
         </div>
-        <div className="absolute left-1/7 bottom-2/9">
-          <Button2>Book a Consultation</Button2>
-        </div>
+        <motion.div
+          whileHover={{ scale: 1.1, cursor: "pointer" }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          className="absolute left-1/7 bottom-2/9"
+        >
+          <Button scaleV={55} backgroundColor="var(--color-VividGreen)">
+            Book a Consultation
+          </Button>
+        </motion.div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.0"

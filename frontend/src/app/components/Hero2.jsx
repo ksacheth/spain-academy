@@ -1,4 +1,5 @@
-import TextReveal from "./TextReveal";
+"use client";
+import TextReveal from "../templates/TextReveal";
 import { motion } from "motion/react";
 
 export default function Hero2() {
@@ -31,7 +32,9 @@ export default function Hero2() {
               <TextReveal>
                 <div className="font-serif text-[2.5rem] leading-[1.23] tracking-[-0.065em] text-black">
                   <span className="block">
-                    <span className="text-VividGreen italic">Spain Academy</span>{" "}
+                    <span className="text-VividGreen italic">
+                      Spain Academy
+                    </span>{" "}
                     is your all-in-one
                   </span>{" "}
                   onboarding kit for life in{" "}
@@ -69,19 +72,19 @@ export default function Hero2() {
 
         {/* RIGHT: images */}
         <div className="relative overflow-visible w-[35vw]  ">
-          <img
+          <motion.img
             src="/green.webp"
             alt=""
             className="absolute top-1/2 -translate-y-1/2 left-0 w-[12rem] -rotate-18"
             aria-hidden="true"
           />
-          <img
+          <motion.img
             src="/yellow.webp"
             alt=""
             className="absolute top-0 -translate-y-2/5 left-full -translate-x-4/5 w-[12rem] rotate-18 "
             aria-hidden="true"
           />
-          <img
+          <motion.img
             src="/red.webp"
             alt=""
             className="absolute w-[14rem] bottom-0 left-full -translate-x-1/2"

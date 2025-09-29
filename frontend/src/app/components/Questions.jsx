@@ -1,21 +1,24 @@
 "use client";
 import { motion } from "motion/react";
+import TextReveal from "../templates/TextReveal";
 
 export default function Questions() {
   return (
     <div className="h-[150svh] bg-white mt-[2rem]">
-      <div className="pt-[5rem] pl-[4rem] font-serif">
-        <h1 className="text-[2.8rem]">
-          <span className="italic">Frequently</span> Asked Questions
-        </h1>
-        <p className="mt-[0.5rem] pr-[30rem] text-[1.2rem]">
-          Got questions? Our FAQ section is built for curious minds, anxious
-          hearts, and future Spain-bound legends. Whether you're wondering about
-          visas, language, or just how to survive without your mom's cooking,
-          we've got answers that are bold, clear, and a little bit fun; just
-          like Spain Academy.
-        </p>
-      </div>
+      <TextReveal>
+        <div className="pt-[5rem] pl-[4rem] font-serif">
+          <h1 className="text-[2.8rem]">
+            <span className="italic">Frequently</span> Asked Questions
+          </h1>
+          <p className="mt-[0.5rem] pr-[30rem] text-[1.2rem] font-inter">
+            Got questions? Our FAQ section is built for curious minds, anxious
+            hearts, and future Spain-bound legends. Whether you're wondering
+            about visas, language, or just how to survive without your mom's
+            cooking, we've got answers that are bold, clear, and a little bit
+            fun; just like Spain Academy.
+          </p>
+        </div>
+      </TextReveal>
       <div className="flex flex-col justify-center items-center h-screen ">
         <div className="relative text-white h-[40rem] w-[60rem]">
           <motion.div

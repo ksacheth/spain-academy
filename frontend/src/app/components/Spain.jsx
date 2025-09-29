@@ -1,23 +1,31 @@
 "use client";
+import TextReveal from "../templates/TextReveal";
 import Button from "./Button";
 import { motion } from "motion/react";
 
 export function Spain() {
   return (
     <div className="">
-      <div className="flex justify-center ">
-        <h1 className="text-[3.5rem] font-bold text-black font-arimo">
-          Why{" "}
-          <span className="text-VividYellow italic font-semibold font-noto-serif">
-            Spain?
-          </span>
-        </h1>
-      </div>
-
+      <TextReveal>
+        <div className="flex justify-center ">
+          <h1 className="text-[3.5rem] font-bold text-black font-arimo">
+            Why{" "}
+            <span className="text-VividYellow italic font-semibold font-noto-serif">
+              Spain?
+            </span>
+          </h1>
+        </div>
+      </TextReveal>
       {/* Cards Container */}
       <div className=" flex flex-col justify-center mt-[3rem] items-center gap-10 mb-[5rem]">
         {/* Red card - expandable */}
-        <div className="relative w-[30rem] flex flex-col group">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0 }} // Change delay for each card
+          className="relative w-[30rem] flex flex-col group"
+        >
           {/* Background shadow layer */}
           <div
             className="absolute inset-0 rounded-2xl bg-[#EBC6C5] translate-y-2
@@ -61,10 +69,16 @@ export function Spain() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Yellow card */}
-        <div className="relative w-[25rem] flex flex-col group text-white">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0 }} // Change delay for each card
+          className="relative w-[25rem] flex flex-col group text-white"
+        >
           {/* Background shadow layer */}
           <div className="absolute inset-0  translate-x-4 rounded-2xl bg-[#FEE5B0] group-hover:rotate-0 group-focus-within:rotate-0" />
 
@@ -98,10 +112,16 @@ export function Spain() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Green card */}
-        <div className="relative w-[25rem] flex flex-col group text-white">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0 }} // Change delay for each card
+          className="relative w-[25rem] flex flex-col group text-white"
+        >
           {/* Background shadow layer */}
           <div className="absolute inset-0  rounded-2xl -translate-x-2 bg-[#B5DCBB] rotate-[-3deg] transition-all duration-400 ease-in-out group-hover:rotate-0 group-focus-within:rotate-0"></div>
 
@@ -137,7 +157,7 @@ export function Spain() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="flex flex-col items-center mt-[1rem]">
         <h2 className="text-[1.25rem] text-black font-arimo">

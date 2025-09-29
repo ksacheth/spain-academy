@@ -1,27 +1,40 @@
-// import "../index.css";
-
+"use client";
+import TextReveal from "../templates/TextReveal";
+import { motion } from "motion/react";
 export default function Offer() {
   return (
     <div className="w-full">
-      <div className="flex justify-center font-arimo font-bold text-[3.5rem] leading-[1.14] tracking-[-0.045em] mt-[12rem]">
-        What We
-        <span className="text-VividGreen italic font-noto-serif font-semibold">
-          {" "}
-          &nbsp;Offer
-        </span>
-      </div>
+      <TextReveal>
+        <div className="flex justify-center font-arimo font-bold text-[3.5rem] leading-[1.14] tracking-[-0.045em] mt-[12rem]">
+          What We
+          <span className="text-VividGreen italic font-noto-serif font-semibold">
+            {" "}
+            &nbsp;Offer
+          </span>
+        </div>
+      </TextReveal>
 
       {/* Cards Container */}
-      <div className=" flex flex-col justify-center mt-[3rem] items-center gap-10 mb-[10rem]">
+      <div className=" flex flex-col justify-center mt-[3rem] items-center gap-10 mb-[10rem] text-white">
         {/* Red card - expandable */}
-        <div className="relative w-[30rem] flex flex-col group">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0 }} // Change delay for each card
+          className="relative w-[30rem] flex flex-col group"
+        >
           {/* Background shadow layer */}
-          <div className="absolute inset-0 rounded-2xl bg-[#EBC6C5] translate-y-2
-          group-hover:rotate-0 group-focus-within:rotate-0" />
+          <div
+            className="absolute inset-0 rounded-2xl bg-[#EBC6C5] translate-y-2
+          group-hover:rotate-0 group-focus-within:rotate-0"
+          />
 
           {/* Main card */}
-          <div className="relative flex-col justify-between items-start rounded-2xl bg-VividRed px-6 py-5 text-white w-full rotate-[2deg] translate-y-5 shadow-lg transition-all duration-400 ease-in-out
-          group-hover:rotate-0 group-focus-within:rotate-0">
+          <div
+            className="relative flex-col justify-between items-start rounded-2xl bg-VividRed px-6 py-5  w-full rotate-[2deg] translate-y-5 shadow-lg transition-all duration-400 ease-in-out
+          group-hover:rotate-0 group-focus-within:rotate-0"
+          >
             {/* header */}
             <div className="min-w-0">
               <h2 className="text-lg font-bold">The Essentials</h2>
@@ -47,9 +60,7 @@ export default function Offer() {
                 </p>
                 <ul className="space-y-3 pl-5">
                   <li className="list-disc">
-                    <span className="font-semibold ">
-                      Language School:
-                    </span>{" "}
+                    <span className="font-semibold ">Language School:</span>{" "}
                     Intensive Spanish programs for academic, social, and
                     everyday life.
                   </li>
@@ -61,9 +72,7 @@ export default function Offer() {
                     admission.
                   </li>
                   <li className="list-disc">
-                    <span className="font-semibold ">
-                      Visa Processing:
-                    </span>{" "}
+                    <span className="font-semibold ">Visa Processing:</span>{" "}
                     Full support for student visa, residence permit renewals,
                     and university documentation.
                   </li>
@@ -71,16 +80,24 @@ export default function Offer() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Yellow card */}
-        <div className="relative w-[32rem] flex flex-col group text-white">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0 }} // Change delay for each card
+          className="relative w-[32rem] flex flex-col group"
+        >
           {/* Background shadow layer */}
           <div className="absolute inset-0  translate-x-4 rounded-2xl bg-[#FEE5B0] group-hover:rotate-0 group-focus-within:rotate-0" />
 
           {/* Main card */}
-          <div className="relative flex-col items-start  justify-between rounded-2xl bg-VividYellow px-6 py-5   rotate-[-3deg] shadow-lg transition-all duration-400 ease-in-out
-              group-hover:rotate-0 group-focus-within:rotate-0">
+          <div
+            className="relative flex-col items-start  justify-between rounded-2xl bg-VividYellow px-6 py-5   rotate-[-3deg] shadow-lg transition-all duration-400 ease-in-out
+              group-hover:rotate-0 group-focus-within:rotate-0"
+          >
             <div>
               <h2 className="text-lg font-bold">The Boosters</h2>
               <p className="text-sm mt-1 ">
@@ -132,21 +149,27 @@ export default function Offer() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Green card */}
-        <div className="relative w-[25rem] flex flex-col group text-white">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0 }} // Change delay for each card
+          className="relative w-[25rem] flex flex-col group"
+        >
           {/* Background shadow layer */}
           <div className="absolute inset-0  rounded-2xl -translate-x-2 bg-[#B5DCBB] rotate-[-3deg] transition-all duration-400 ease-in-out group-hover:rotate-0 group-focus-within:rotate-0"></div>
 
           {/* Main card */}
-          <div className="relative flex-col items-start justify-between rounded-2xl bg-VividGreen px-6 py-5  rotate-[2deg] shadow-lg transition-all duration-400 ease-in-out
-          group-hover:rotate-0 group-focus-within:rotate-0">
+          <div
+            className="relative flex-col items-start justify-between rounded-2xl bg-VividGreen px-6 py-5  rotate-[2deg] shadow-lg transition-all duration-400 ease-in-out
+          group-hover:rotate-0 group-focus-within:rotate-0"
+          >
             <div>
               <h2 className="text-lg font-bold">Future-Proof Tools</h2>
-              <p className="text-sm mt-1 pb-[1rem]">
-                Career & Future Planning
-              </p>
+              <p className="text-sm mt-1 pb-[1rem]">Career & Future Planning</p>
             </div>
             <div
               className="
@@ -184,16 +207,24 @@ export default function Offer() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Black card */}
-        <div className=" relative w-[25rem] -mt-8 flex flex-col group text-white">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0 }} // Change delay for each card
+          className="relative w-[25rem] -mt-8 flex flex-col group"
+        >
           {/* Background shadow layer */}
           <div className="absolute inset-0  rounded-2xl translate-x-3 translate-y-2 bg-[#B2B2B2] transition-all duration-400 ease-in-out group-hover:rotate-0 group-focus-within:rotate-0"></div>
 
           {/* Main card */}
-          <div className="relative flex-col items-start justify-between rounded-2xl bg-VividBlack px-6 py-5  -rotate-[3deg] shadow-lg transition-all duration-400 ease-in-out
-          group-hover:rotate-0 group-focus-within:rotate-0">
+          <div
+            className="relative flex-col items-start justify-between rounded-2xl bg-VividBlack px-6 py-5  -rotate-[3deg] shadow-lg transition-all duration-400 ease-in-out
+          group-hover:rotate-0 group-focus-within:rotate-0"
+          >
             <div>
               <h2 className="text-lg font-bold">Real Life in Spain</h2>
               <p className="text-sm mt-1  pb-[1rem]">
@@ -230,7 +261,7 @@ export default function Offer() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

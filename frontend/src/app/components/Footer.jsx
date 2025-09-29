@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="h-[40rem] bg-VividYellow text-white flex justify-center">
+    <div className="h-[40rem] bg-VividYellow text-white flex justify-center" id="contact">
       <div className="flex">
         {/* <div>
           <h1 className="text-[3rem] font-bold">Spain Academy</h1>

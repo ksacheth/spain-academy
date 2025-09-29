@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { Menu, X } from "lucide-react"; // Using lucide-react for icons, a popular choice
 import Button1 from "./Button1/Button1.jsx";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,7 +26,7 @@ export default function Header() {
           <a href="/about" className="hover:text-blue-500">
             About
           </a>
-          <a href="/contact" className="hover:text-blue-500">
+          <a href="#contact" className="hover:text-blue-500">
             Contact
           </a>
         </div>

@@ -22,46 +22,45 @@ export default function Hero2() {
       {/* Hero */}
       <div className="bg-[#F9F9F9] rounded-b-[70px] flex h-full ">
         {/* LEFT: text */}
-        <div className="flex w-[65vw] justify-center mb-[8rem] ">
+        <div className="flex w-[65vw] justify-center mb-[8rem]">
           <div className="flex flex-col gap-[4rem]">
-            <div className="flex items-center  ">
-              <img src="/logo.png" alt="Spain Academy" className="w-[12rem]" />
+            {/* Logot */}
+            <div className="flex items-center">
+              <img
+                src="/logo.png"
+                alt="Spain Academy"
+                className="w-[12rem] md:w-[7rem] lg:w-[9rem] xl:w-[11rem] 2xl:w-[14rem]"
+              />
             </div>
-
-            <div className="">
+            <div className="text-[2.5rem] md:text-[1.6rem] lg:text-[2rem] xl:text-[2.4rem] 2xl:text-[2.9rem]">
               <TextReveal>
-                <div className="font-serif text-[2.5rem] leading-[1.23] tracking-[-0.065em] text-black">
+                <div className="font-serif leading-[1.23] tracking-[-0.065em] text-black">
                   <span className="block">
-                    <span className="text-VividGreen italic">
-                      Spain Academy
-                    </span>{" "}
-                    is your all-in-one
-                  </span>{" "}
-                  onboarding kit for life in{" "}
-                  <span className="italic">Spain</span>.
+                    <span className="text-VividGreen italic">Spain Academy </span>is your all-in-one
+                  </span>
+                  onboarding kit for life in <span className="italic"> Spain</span>.
                 </div>
               </TextReveal>
 
               <TextReveal>
-                <div className="mt-[2rem] font-serif text-[2.5rem] leading-[1.23] tracking-[-0.065em] text-black">
+                <div className="mt-[2rem] font-serif  leading-[1.23] tracking-[-0.065em] text-black">
                   <span className="text-[#959595] block">
-                    From <span className="italic">visas</span> and{" "}
+                    From <span className="italic">visas</span> and
                     <span className="italic">university admissions</span>
                   </span>
                   <span className="text-[#5A5A5A] block">
-                    {" "}
                     to <span className="italic">cultural immersion</span> and
                     <span className="italic"> community</span>
                   </span>
                   <span className="text-[#3C3C3C] block">
                     <span className="italic">support,</span> we make sure you
                     arrive
-                  </span>{" "}
+                  </span>
                   <span className="block">
                     prepared, feel at home, and have
                   </span>
                   <span className="block">
-                    everything you need to{" "}
+                    everything you need to
                     <span className="text-VividGreen italic">thrive</span>.
                   </span>
                 </div>
@@ -71,23 +70,23 @@ export default function Hero2() {
         </div>
 
         {/* RIGHT: images */}
-        <div className="relative overflow-visible w-[35vw]  ">
+        <div className="relative overflow-visible w-[35vw]">
           <motion.img
             src="/green.webp"
             alt=""
-            className="absolute top-1/2 -translate-y-1/2 left-0 w-[12rem] -rotate-18"
+            className="absolute top-1/2 -translate-y-1/2 left-0  -rotate-18 w-[12rem] md:w-[8rem] lg:w-[10rem] xl:w-[12rem] 2xl:w-[15rem]"
             aria-hidden="true"
           />
           <motion.img
             src="/yellow.webp"
             alt=""
-            className="absolute top-0 -translate-y-2/5 left-full -translate-x-4/5 w-[12rem] rotate-18 "
+            className="absolute top-0 -translate-y-2/5 left-full -translate-x-4/5  rotate-18 w-[12rem] md:w-[8rem] lg:w-[10rem] xl:w-[12rem] 2xl:w-[15rem]"
             aria-hidden="true"
           />
           <motion.img
             src="/red.webp"
             alt=""
-            className="absolute w-[14rem] bottom-0 left-full -translate-x-1/2"
+            className="absolute bottom-0 left-full -translate-x-1/2  w-[14rem] md:w-[10rem] lg:w-[12rem] xl:w-[14rem] 2xl:w-[17rem]"
             aria-hidden="true"
           />
         </div>

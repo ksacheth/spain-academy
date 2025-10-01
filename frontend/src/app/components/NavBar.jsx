@@ -1,7 +1,9 @@
 "use client";
 import { useState } from "react";
 import Button from "./Button";
+import { Menu, X } from "lucide-react";
 import { motion } from "motion/react";
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -20,7 +22,7 @@ export default function Header() {
           />
         </div>
 
-        <div className="flex items-center justify-between text-lg font-medium w-[50%]">
+        <div className="hidden md:flex items-center justify-between text-lg font-medium w-[50%]">
           <a href="/" className="hover:text-blue-500">
             The Team
           </a>
@@ -38,13 +40,45 @@ export default function Header() {
         <motion.div
           whileHover={{ scale: 1.1, cursor: "pointer" }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className="block"
+          className="hidden md:block"
         >
           <Button scaleV={25} backgroundColor="var(--color-VividGreen)">
             Book
           </Button>
         </motion.div>
+
+        <button
+          onClick={toggleMenu}
+          className="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-gray-400"
+        >
+          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
+
+      {isMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-md z-50">
+          <div className="flex flex-col items-center space-y-6 py-6 text-lg font-medium">
+            <a href="/" className="hover:text-blue-500" onClick={toggleMenu}>
+              Home
+            </a>
+            <a
+              href="/about"
+              className="hover:text-blue-500"
+              onClick={toggleMenu}
+            >
+              About
+            </a>
+            <a
+              href="/contact"
+              className="hover:text-blue-500"
+              onClick={toggleMenu}
+            >
+              Contact
+            </a>
+            <Button>Book</Button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

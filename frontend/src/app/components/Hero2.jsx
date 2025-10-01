@@ -61,7 +61,7 @@ export default function Hero2() {
                   </span>
                   <span className="block">
                     everything you need to
-                    <span className="text-VividGreen italic">thrive</span>.
+                    <span className="text-VividGreen italic"> thrive</span>.
                   </span>
                 </div>
               </TextReveal>

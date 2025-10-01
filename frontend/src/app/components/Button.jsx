@@ -9,6 +9,7 @@ export default function Button({ scaleV, backgroundColor, children }) {
       className="relative flex items-center gap-[15px] cursor-pointer bg-[#f9f9f9] rounded-full px-[30px] py-[10px] overflow-hidden"
       whileHover="hover"
       initial="initial"
+      onClick={() => window.open("https://cal.com/sacheth/30min", "_blank")}
     >
       <motion.div
         className="w-2 h-2 rounded-full bg-black z-0"

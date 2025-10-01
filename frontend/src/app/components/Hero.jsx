@@ -3,8 +3,10 @@ import Button from "./Button";
 import TextReveal from "../templates/TextReveal";
 import { motion } from "motion/react";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Hero() {
+  const router = useRouter();
   const [hovered, setHovered] = useState(null);
   return (
     <div className="flex flex-col sm:flex-row  sm:h-[clamp(400px,48vw,1000px)] text-black">

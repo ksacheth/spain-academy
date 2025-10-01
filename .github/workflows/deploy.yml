@@ -10,10 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the code
-        uses: actions/checkout@v2
-
-      - name: executing remote ssh commands using password
+      - name: executing remote ssh commands using key
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: 65.0.95.56
@@ -22,7 +19,8 @@ jobs:
           port: 22
           script: |
             cd spain-academy
-            # git pull
-            # npm install
-            # npm run build
-            # pm2 restart all
+            git pull
+            cd frontend
+            npm ci
+            npm run build
+            pm2 restart spain

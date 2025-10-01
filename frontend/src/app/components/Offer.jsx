@@ -5,7 +5,7 @@ export default function Offer() {
   return (
     <div className="w-full">
       <TextReveal>
-        <div className="flex justify-center font-arimo font-bold text-[3.5rem] leading-[1.14] tracking-[-0.045em] mt-[12rem]">
+        <div className="flex justify-center font-arimo font-bold text-[3.5rem] leading-[1.14] tracking-[-0.045em]">
           What We
           <span className="text-VividGreen italic font-noto-serif font-semibold">
             {" "}

@@ -46,7 +46,7 @@ const imageLogos = [
 
 export default function Logo() {
   return (
-    <div style={{ height: "100px", position: "relative", overflow: "hidden" }} className="mt-[5rem]">
+    <div style={{ height: "100px", position: "relative", overflow: "hidden" }} className="my-[6rem]">
       <LogoLoop
         logos={techLogos}
         speed={120}

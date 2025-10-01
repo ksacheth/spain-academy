@@ -2,6 +2,7 @@
 import { motion } from "motion/react";
 import { useState } from "react";
 import TextReveal from "../templates/TextReveal";
+
 export default function Questions() {
   const [hoveredCard, setHoveredCard] = useState(null);
   return (
@@ -37,7 +38,7 @@ export default function Questions() {
             onMouseEnter={() => setHoveredCard(0)}
             onMouseLeave={() => setHoveredCard(null)}
             animate={{
-              opacity: hoveredCard !== null && hoveredCard !== 0 ? 0.5 : 1,
+              filter: hoveredCard !== null && hoveredCard !== 0 ? "blur(4px)" : "blur(0px)",
             }}
             className="bg-VividBlack w-[20rem] p-[2rem] rounded-[1.6rem] absolute left-[5%] top-[20%] z-10 shadow-2xl"
           >
@@ -60,7 +61,7 @@ export default function Questions() {
             onMouseEnter={() => setHoveredCard(1)}
             onMouseLeave={() => setHoveredCard(null)}
             animate={{
-              opacity: hoveredCard !== null && hoveredCard !== 1 ? 0.5 : 1,
+              filter: hoveredCard !== null && hoveredCard !== 1 ? "blur(2px)" : "blur(0px)",
             }}
             className="bg-[#F7F7F7] w-[20rem] p-[2rem] rounded-[1.6rem] absolute left-[65%] top-[15%] text-black z-10 shadow-2xl"
           >
@@ -83,7 +84,7 @@ export default function Questions() {
             onMouseEnter={() => setHoveredCard(2)}
             onMouseLeave={() => setHoveredCard(null)}
             animate={{
-              opacity: hoveredCard !== null && hoveredCard !== 2 ? 0.5 : 1,
+              filter: hoveredCard !== null && hoveredCard !== 2 ? "blur(2px)" : "blur(0px)",
             }}
             className="bg-VividGreen w-[20rem] p-[2rem] rounded-[1.6rem] absolute left-[50%] -translate-x-1/2 top-[10%] z-10 shadow-2xl"
           >
@@ -106,7 +107,7 @@ export default function Questions() {
             onMouseEnter={() => setHoveredCard(3)}
             onMouseLeave={() => setHoveredCard(null)}
             animate={{
-              opacity: hoveredCard !== null && hoveredCard !== 3 ? 0.5 : 1,
+              filter: hoveredCard !== null && hoveredCard !== 3 ? "blur(2px)" : "blur(0px)",
             }}
             className="bg-VividYellow w-[20rem] p-[2rem] rounded-[1.6rem] absolute left-[25%] top-[45%] z-10 shadow-2xl"
           >
@@ -129,7 +130,7 @@ export default function Questions() {
             onMouseEnter={() => setHoveredCard(4)}
             onMouseLeave={() => setHoveredCard(null)}
             animate={{
-              opacity: hoveredCard !== null && hoveredCard !== 4 ? 0.5 : 1,
+              filter: hoveredCard !== null && hoveredCard !== 4 ? "blur(2px)" : "blur(0px)",
             }}
             className="bg-VividRed w-[20rem] p-[2rem] rounded-[1.6rem] absolute top-[40%] left-[55%] z-10 shadow-2xl"
           >

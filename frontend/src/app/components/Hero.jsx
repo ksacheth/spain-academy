@@ -2,8 +2,10 @@
 import Button from "./Button";
 import TextReveal from "../templates/TextReveal";
 import { motion } from "motion/react";
+import { useState } from "react";
 
 export default function Hero() {
+  const [hovered, setHovered] = useState(null);
   return (
     <div className="flex flex-col sm:flex-row  sm:h-[clamp(400px,48vw,1000px)] text-black">
       {/* Text Section */}
@@ -48,6 +50,12 @@ export default function Hero() {
             className="absolute bottom-0 z-15 w-[30vw] sm:w-[clamp(100px,20vw,448px)]"
             whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 100 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            onMouseEnter={() => setHovered(0)}
+            onMouseLeave={() => setHovered(null)}
+            animate={{
+              filter:
+                hovered !== null && hovered !== 0 ? "blur(1px)" : "blur(0px)",
+            }}
           >
             <img src="Person1.webp" alt="Hero Image" className="w-full" />
           </motion.span>
@@ -56,6 +64,12 @@ export default function Hero() {
             className="absolute bottom-0 left-[35%] z-20 w-[35vw] sm:w-[clamp(100px,27vw,604.8px)]"
             whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 100 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            onMouseEnter={() => setHovered(1)}
+            onMouseLeave={() => setHovered(null)}
+            animate={{
+              filter:
+                hovered !== null && hovered !== 1 ? "blur(1px)" : "blur(0px)",
+            }}
           >
             <img src="Person2.webp" alt="Hero Image" className="w-full" />
           </motion.span>
@@ -64,6 +78,12 @@ export default function Hero() {
             className="absolute bottom-0 left-[75%] z-15 w-[30vw] sm:w-[clamp(100px,23vw,515.2px)]"
             whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 100 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            onMouseEnter={() => setHovered(2)}
+            onMouseLeave={() => setHovered(null)}
+            animate={{
+              filter:
+                hovered !== null && hovered !== 2 ? "blur(1px)" : "blur(0px)",
+            }}
           >
             <img src="Person3.webp" alt="Hero Image" className="w-full" />
           </motion.span>

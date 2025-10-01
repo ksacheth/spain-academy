@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 export default function Hero() {
   return (
     <div className="flex flex-col sm:flex-row  sm:h-[clamp(400px,48vw,1000px)] text-black">
-      {/* Text Section - Top on mobile, Left on desktop */}
+      {/* Text Section */}
       <div className="flex flex-col w-[45.8%] shrink-0 items-center justify-center bg-white  relative">
         <div className="absolute  max-w-[943.8464px]">
           <div className="font-serif leading-[1.25] tracking-[-0.045em] 2xl:text-[5rem] xl:text-[4rem] lg:text-[3.2rem] md:text-[2.5rem] text-VividGreen">
@@ -41,7 +41,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Images Section - Bottom on mobile, Right on desktop */}
+      {/* Images Section */}
       <div className="h-[50vw] sm:h-auto sm:grow bg-transparent overflow-visible z-10 ">
         <div className="mx-auto my-auto max-w-[1214px] sm:w-full h-full relative  ">
           <motion.span

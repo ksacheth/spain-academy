@@ -17,10 +17,4 @@ jobs:
           username: ubuntu
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           port: 22
-          script: |
-            cd spain-academy
-            git pull
-            cd frontend
-            npm ci
-            npm run build
-            pm2 restart spain
+          script: ./deploy.sh

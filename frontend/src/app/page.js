@@ -21,10 +21,10 @@ export default function Home() {
       <Logo />
       <Offer />
      
-      {/* <Spain />
+      <Spain />
       <Progress />
       <Questions />
-      <Footer /> */}
+      <Footer />
        {/* <Offer_v3 />
       <Offer_v4 />
       <Offer_v5 /> */}

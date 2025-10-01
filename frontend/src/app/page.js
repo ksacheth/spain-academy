@@ -20,13 +20,14 @@ export default function Home() {
       <Hero2 />
       <Logo />
       <Offer />
-      {/* <Offer_v3 />
-      <Offer_v4 />
-      <Offer_v5 /> */}
+     
       <Spain />
       <Progress />
       <Questions />
       <Footer />
+       {/* <Offer_v3 />
+      <Offer_v4 />
+      <Offer_v5 /> */}
     </div>
   );
 }

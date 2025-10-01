@@ -5,7 +5,8 @@ import { motion } from "motion/react";
 
 export default function Hero() {
   return (
-    <div className="flex h-[clamp(400px,48vw,1000px)] text-black mx-auto ">
+    <div className="flex flex-col sm:flex-row  sm:h-[clamp(400px,48vw,1000px)] text-black">
+      {/* Text Section - Top on mobile, Left on desktop */}
       <div className="flex flex-col w-[45.8%] shrink-0 items-center justify-center bg-white  relative">
         <div className="absolute  max-w-[943.8464px]">
           <div className="font-serif leading-[1.25] tracking-[-0.045em] 2xl:text-[5rem] xl:text-[4rem] lg:text-[3.2rem] md:text-[2.5rem] text-VividGreen">
@@ -31,7 +32,7 @@ export default function Hero() {
           <motion.div
             whileHover={{ scale: 1.1, cursor: "pointer" }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="block ml-5 mt-[2rem]"
+            className="ml-5 mt-[2rem] w-fit"
           >
             <Button scaleV={55} backgroundColor="var(--color-VividGreen)">
               Book a Consultation
@@ -39,10 +40,12 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
-      <div className="grow bg-transparent overflow-visible z-10 ">
-        <div className="mx-auto my-auto  -4 max-w-[1214px] relative h-full ">
+
+      {/* Images Section - Bottom on mobile, Right on desktop */}
+      <div className="h-[50vw] sm:h-auto sm:grow bg-transparent overflow-visible z-10 ">
+        <div className="mx-auto my-auto max-w-[1214px] sm:w-full h-full relative  ">
           <motion.span
-            className="absolute bottom-0 z-15 w-[clamp(100px,20vw,448px)]"
+            className="absolute bottom-0 z-15 w-[30vw] sm:w-[clamp(100px,20vw,448px)]"
             whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 100 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
@@ -50,7 +53,7 @@ export default function Hero() {
           </motion.span>
 
           <motion.span
-            className="absolute bottom-0 left-[35%] z-20 w-[clamp(100px,27vw,604.8px)]"
+            className="absolute bottom-0 left-[35%] z-20 w-[35vw] sm:w-[clamp(100px,27vw,604.8px)]"
             whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 100 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
@@ -58,7 +61,7 @@ export default function Hero() {
           </motion.span>
 
           <motion.span
-            className="absolute bottom-0 left-[75%] z-15 w-[clamp(100px,23vw,515.2px)]"
+            className="absolute bottom-0 left-[75%] z-15 w-[30vw] sm:w-[clamp(100px,23vw,515.2px)]"
             whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 100 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >

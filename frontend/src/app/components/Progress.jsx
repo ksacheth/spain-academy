@@ -228,7 +228,7 @@ export default function Progress() {
   }, []);
 
   return (
-    <div ref={root} className="bg-[#F9F9F9] rounded-[100px] mt-20 pt-[15vw]">
+    <div ref={root} className="bg-[#F9F9F9] rounded-[100px] mt-20 pt-[15vw] z-10">
       <div className="bg-transparent h-100% relative ">
         <div className=" absolute -top-1/15 right-2/9">
           <div className="text-right flex-col ">

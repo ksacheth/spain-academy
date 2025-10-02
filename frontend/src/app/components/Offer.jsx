@@ -3,7 +3,7 @@ import TextReveal from "../templates/TextReveal";
 import { motion } from "motion/react";
 export default function Offer() {
   return (
-    <div className="w-full">
+    <div className="w-full z-10">
       <TextReveal>
         <div className="flex justify-center font-arimo font-bold text-[3.5rem] leading-[1.14] tracking-[-0.045em]">
           What We

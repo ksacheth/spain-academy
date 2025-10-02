@@ -12,7 +12,7 @@ export default function Header() {
   };
 
   return (
-    <nav className="relative bg-white text-black">
+    <nav className="relative bg-white text-black z-10">
       <div className="mx-12 flex items-center justify-between px-4 sm:px-6 lg:px-8 py-10">
         <div>
           <img

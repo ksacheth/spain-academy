@@ -9,9 +9,9 @@ export default function Hero() {
   const router = useRouter();
   const [hovered, setHovered] = useState(null);
   return (
-    <div className="flex flex-col sm:flex-row  sm:h-[clamp(400px,48vw,1000px)] text-black bg-white">
+    <div className="flex flex-col sm:flex-row  sm:h-[clamp(400px,48vw,1000px)] text-black bg-white border-2 z-10">
       {/* Text Section */}
-      <div className="flex flex-col w-[45.8%] shrink-0 items-center justify-center bg-white  relative">
+      <div className="flex flex-col w-[45.8%] shrink-0 items-center justify-center bg-white  relative z-10">
         <div className="absolute  max-w-[943.8464px]">
           <div className="font-serif leading-[1.25] tracking-[-0.045em] 2xl:text-[5rem] xl:text-[4rem] lg:text-[3.2rem] md:text-[2.5rem] text-VividGreen">
             <TextReveal delay={0}>
@@ -46,11 +46,11 @@ export default function Hero() {
       </div>
 
       {/* Images Section */}
-      <div className="h-[50vw] sm:h-auto sm:grow bg-transparent overflow-visible z-10 ">
+      <div className="h-[50vw] sm:h-auto sm:grow overflow-visible bg-white z-10">
         <div className="mx-auto my-auto max-w-[1214px] sm:w-full h-full relative  ">
           <motion.span
-            className="absolute bottom-0 z-15 w-[30vw] sm:w-[clamp(100px,20vw,448px)]"
-            whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 100 }}
+            className="absolute bottom-0 z-10 w-[30vw] sm:w-[clamp(100px,20vw,448px)]"
+            whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 21 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
             onMouseEnter={() => setHovered(0)}
             onMouseLeave={() => setHovered(null)}
@@ -64,7 +64,7 @@ export default function Hero() {
 
           <motion.span
             className="absolute bottom-0 left-[35%] z-20 w-[35vw] sm:w-[clamp(100px,27vw,604.8px)]"
-            whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 100 }}
+            whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 21 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
             onMouseEnter={() => setHovered(1)}
             onMouseLeave={() => setHovered(null)}
@@ -77,8 +77,8 @@ export default function Hero() {
           </motion.span>
 
           <motion.span
-            className="absolute bottom-0 left-[75%] z-15 w-[30vw] sm:w-[clamp(100px,23vw,515.2px)]"
-            whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 100 }}
+            className="absolute bottom-0 left-[75%] z-10 w-[30vw] sm:w-[clamp(100px,23vw,515.2px)]"
+            whileHover={{ scale: 1.08, cursor: "pointer", zIndex: 21 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
             onMouseEnter={() => setHovered(2)}
             onMouseLeave={() => setHovered(null)}

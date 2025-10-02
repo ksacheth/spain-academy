@@ -7,29 +7,29 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function SmoothScrollProvider({ children }) {
+export default function LenisProvider({ children }) {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.1,
-      lerp: 0.1,
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
       smoothTouch: false,
+      touchMultiplier: 2,
     });
 
-    // Keep a stable tick function reference for cleanup
+    // Sync Lenis with GSAP ticker
     const onTick = (time) => {
-      lenis.raf(time * 1000); // gsap gives seconds; Lenis expects ms
+      lenis.raf(time * 1000);
     };
     gsap.ticker.add(onTick);
 
     // Update ScrollTrigger on each Lenis scroll
-    const onLenisScroll = () => ScrollTrigger.update();
-    lenis.on("scroll", onLenisScroll);
+    lenis.on("scroll", ScrollTrigger.update);
 
-    // Wire ScrollTrigger to use Lenis
+    // Wire ScrollTrigger to use Lenis virtual scroll
     ScrollTrigger.scrollerProxy(document.documentElement, {
       scrollTop(value) {
-        if (value != null) {
+        if (arguments.length) {
           lenis.scrollTo(value, { immediate: true });
         }
         return lenis.scroll;
@@ -45,18 +45,16 @@ export default function SmoothScrollProvider({ children }) {
       pinType: document.documentElement.style.transform ? "transform" : "fixed",
     });
 
-    const onResize = () => ScrollTrigger.refresh();
-    window.addEventListener("resize", onResize);
+    // Refresh ScrollTrigger on resize
+    ScrollTrigger.addEventListener("refresh", () => lenis.resize());
 
-    // Initial refresh after mount
-    setTimeout(() => ScrollTrigger.refresh(), 0);
+    // Initial refresh
+    ScrollTrigger.refresh();
 
     return () => {
-      window.removeEventListener("resize", onResize);
       gsap.ticker.remove(onTick);
-      lenis.off("scroll", onLenisScroll);
+      lenis.off("scroll", ScrollTrigger.update);
       lenis.destroy();
-      // kill all triggers created so far
       ScrollTrigger.getAll().forEach((t) => t.kill());
     };
   }, []);

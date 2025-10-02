@@ -9,7 +9,7 @@ export default function Hero() {
   const router = useRouter();
   const [hovered, setHovered] = useState(null);
   return (
-    <div className="flex flex-col sm:flex-row  sm:h-[clamp(400px,48vw,1000px)] text-black">
+    <div className="flex flex-col sm:flex-row  sm:h-[clamp(400px,48vw,1000px)] text-black bg-white">
       {/* Text Section */}
       <div className="flex flex-col w-[45.8%] shrink-0 items-center justify-center bg-white  relative">
         <div className="absolute  max-w-[943.8464px]">

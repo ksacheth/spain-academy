@@ -2,9 +2,10 @@
 import { Analytics } from "@vercel/analytics/next";
 import { Inter, Noto_Serif, Public_Sans, Arimo } from "next/font/google";
 import "./globals.css";
-import { ReactLenis } from "lenis/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import SmoothScrollProvider from "./temp/LenisProvider";
+import { ReactLenisProvider } from "./temp/ReactLenis";
+import LenisProvider from "./temp/LenisProvider";
 
 const arimo = Arimo({
   variable: "--font-arimo",
@@ -63,7 +64,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.variable} ${notoSerif.variable} ${publicSans.variable} ${arimo.variable} antialiased`}
       >
-        <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        {children}
         <Analytics />
         <SpeedInsights />
       </body>

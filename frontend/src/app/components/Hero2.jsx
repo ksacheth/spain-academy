@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export default function Hero2() {
   return (
-    <div className=" relative z-10">
+    <div className=" relative z-10 bg-transparent">
       <svg
         id="Layer_1"
         data-name="Layer 1"
@@ -46,7 +46,7 @@ export default function Hero2() {
                 <div className="mt-[2rem] font-serif  leading-[1.23] tracking-[-0.065em] text-black">
                   <span className="text-[#959595] block">
                     From <span className="italic">visas</span> and
-                    <span className="italic">university admissions</span>
+                    <span className="italic"> university admissions</span>
                   </span>
                   <span className="text-[#5A5A5A] block">
                     to <span className="italic">cultural immersion</span> and

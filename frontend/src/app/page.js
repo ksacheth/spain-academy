@@ -17,22 +17,19 @@ export default function Home() {
   return (
     <>
       <ReactLenis root>
-        <div className="bg-white z-10">
-          <Headers />
-          <Hero />
-          <Hero2 />
-          <Logo />
-          <Offer />
-          <Spain />
-          <Progress />
-          <Questions />
-        </div>
+        <Headers />
+        <Hero />
+        <Hero2 />
+        <Logo />
+        <Offer />
+        <Spain />
+        <Progress />
+        <Questions />
 
         <Footer />
         {/* <Offer_v3 />
          <Offer_v4 />
         <Offer_v5 /> */}
-        
       </ReactLenis>
     </>
   );

@@ -1,4 +1,3 @@
-// app/layout.jsx
 import { Analytics } from "@vercel/analytics/next";
 import { Inter, Noto_Serif, Public_Sans, Arimo } from "next/font/google";
 import "./globals.css";

@@ -2,7 +2,6 @@
 import TextReveal from "../templates/TextReveal";
 import Button from "./Button";
 import { motion } from "motion/react";
-
 export function Spain() {
   return (
     <div className="z-10 bg-white relative">

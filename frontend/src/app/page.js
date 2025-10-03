@@ -7,11 +7,11 @@ import Offer from "./components/Offer";
 import Questions from "./components/Questions";
 import Logo from "./components/Logo";
 import Footer from "./components/Footer";
+import { Spain } from "./components/Spain";
+import { ReactLenis } from "lenis/react";
 import Offer_v3 from "./temp/Offer_v3";
 import Offer_v4 from "./temp/Offer_v4";
 import Offer_v5 from "./temp/Offer_v5";
-import { Spain } from "./components/Spain";
-import { ReactLenis } from "lenis/react";
 
 export default function Home() {
   return (
@@ -25,7 +25,6 @@ export default function Home() {
         <Spain />
         <Progress />
         <Questions />
-
         <Footer />
         {/* <Offer_v3 />
          <Offer_v4 />

@@ -4,7 +4,6 @@ import Button from "./Button";
 import { Menu, X } from "lucide-react";
 import { motion } from "motion/react";
 import CenterUnderline from "../templates/underline-center";
-
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

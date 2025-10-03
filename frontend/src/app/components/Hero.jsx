@@ -4,7 +4,6 @@ import TextReveal from "../templates/TextReveal";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-
 export default function Hero() {
   const router = useRouter();
   const [hovered, setHovered] = useState(null);

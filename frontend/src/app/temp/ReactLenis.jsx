@@ -2,7 +2,6 @@
 import gsap from "gsap";
 import { ReactLenis } from "lenis/react";
 import { useEffect, useRef } from "react";
-
 export function ReactLenisProvider({ children }) {
   const lenisRef = useRef();
 

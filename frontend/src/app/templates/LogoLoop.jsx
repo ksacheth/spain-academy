@@ -6,7 +6,6 @@ const ANIMATION_CONFIG = {
   MIN_COPIES: 2,
   COPY_HEADROOM: 2,
 };
-
 const toCssLength = (value) =>
   typeof value === "number" ? `${value}px` : value ?? undefined;
 

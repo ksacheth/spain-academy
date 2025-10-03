@@ -63,7 +63,7 @@ export default function StackingCardsDemo() {
     >
       <StackingCards
         totalCards={cards.length}
-        scrollOptons={{ container }}
+        scrollOptions={{ container }}
       >
         <div className="relative font-calendas h-[620px] w-full z-10 text-2xl md:text-7xl font-bold uppercase flex justify-center items-center text-[#ff5941] whitespace-pre">
           Scroll down ↓

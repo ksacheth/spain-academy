@@ -3,7 +3,7 @@ import TextReveal from "../templates/TextReveal";
 import { motion } from "motion/react";
 export default function Offer() {
   return (
-    <div className="w-full">
+    <div className="w-full z-10 relative bg-white  pb-[10rem]">
       <TextReveal>
         <div className="flex justify-center font-arimo font-bold text-[3.5rem] leading-[1.14] tracking-[-0.045em]">
           What We
@@ -15,7 +15,7 @@ export default function Offer() {
       </TextReveal>
 
       {/* Cards Container */}
-      <div className=" flex flex-col justify-center mt-[3rem] items-center gap-10 mb-[10rem] text-white">
+      <div className=" flex flex-col justify-center mt-[3rem] items-center gap-10  text-white">
         {/* Red card - expandable */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}

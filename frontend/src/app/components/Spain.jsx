@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 export function Spain() {
   return (
-    <div className="">
+    <div className="z-10 bg-white relative">
       <TextReveal>
         <div className="flex justify-center ">
           <h1 className="text-[3.5rem] font-bold text-black font-arimo">

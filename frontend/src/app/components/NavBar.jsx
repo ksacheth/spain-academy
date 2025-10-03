@@ -3,6 +3,7 @@ import { useState } from "react";
 import Button from "./Button";
 import { Menu, X } from "lucide-react";
 import { motion } from "motion/react";
+import CenterUnderline from "../templates/underline-center";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +13,7 @@ export default function Header() {
   };
 
   return (
-    <nav className="relative bg-white text-black">
+    <nav className="relative bg-white text-black z-10">
       <div className="mx-12 flex items-center justify-between px-4 sm:px-6 lg:px-8 py-10">
         <div>
           <img
@@ -23,17 +24,15 @@ export default function Header() {
         </div>
 
         <div className="hidden md:flex items-center justify-between text-lg font-medium w-[50%]">
-          <a href="/" className="hover:text-blue-500">
-            The Team
+          <a href="/"><CenterUnderline>The Team</CenterUnderline></a>
+          <a href="/about">
+            <CenterUnderline>Blog</CenterUnderline>
           </a>
-          <a href="/about" className="hover:text-blue-500">
-            Blog
+          <a href="#contact">
+            <CenterUnderline>SA.TV</CenterUnderline>
           </a>
-          <a href="#contact" className="hover:text-blue-500">
-            SA.TV
-          </a>
-          <a href="#contact" className="hover:text-blue-500">
-            Contact
+          <a href="#contact">
+            <CenterUnderline>Contact</CenterUnderline>
           </a>
         </div>
 

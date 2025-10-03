@@ -4,7 +4,8 @@ import { motion } from "motion/react";
 
 export default function Hero2() {
   return (
-    <div className=" relative z-10 bg-transparent">
+    <div className="bg-white z-10 relative">
+      <div className=" relative z-30 bg-transparent">
       <svg
         id="Layer_1"
         data-name="Layer 1"
@@ -91,6 +92,7 @@ export default function Hero2() {
           />
         </div>
       </div>
+    </div>
     </div>
   );
 }

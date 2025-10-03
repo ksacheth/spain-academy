@@ -16,23 +16,21 @@ import { ReactLenis } from "lenis/react";
 export default function Home() {
   return (
     <>
-      <div className="bg-white">
-        <ReactLenis root>
-          <Headers />
-          <Hero />
-          <Hero2 />
-          <Logo />
-          <Offer />
-          <Spain />
-          <Progress />
+      <ReactLenis root>
+        <Headers />
+        <Hero />
+        <Hero2 />
+        <Logo />
+        <Offer />
+        <Spain />
+        <Progress />
+        <Questions />
 
-          {/* <Footer /> */}
-          {/* <Offer_v3 />
+        <Footer />
+        {/* <Offer_v3 />
          <Offer_v4 />
         <Offer_v5 /> */}
-        </ReactLenis>
-      </div>
-      <Questions />
+      </ReactLenis>
     </>
   );
 }

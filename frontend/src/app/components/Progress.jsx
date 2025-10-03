@@ -228,7 +228,8 @@ export default function Progress() {
   }, []);
 
   return (
-    <div ref={root} className="bg-[#F9F9F9] rounded-[100px] mt-20 pt-[15vw]">
+    <div className="bg-white z-10 relative pt-20">
+      <div ref={root} className="bg-[#F9F9F9] rounded-[100px]  pt-[15vw]">
       <div className="bg-transparent h-100% relative ">
         <div className=" absolute -top-1/15 right-2/9">
           <div className="text-right flex-col ">
@@ -587,6 +588,7 @@ export default function Progress() {
           </foreignObject> */}
         </svg>
       </div>
+    </div>
     </div>
   );
 }

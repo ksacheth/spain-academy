@@ -46,7 +46,8 @@ const imageLogos = [
 
 export default function Logo() {
   return (
-    <div style={{ height: "100px", position: "relative", overflow: "hidden" }} className="my-[6rem] bg-white">
+    <div className="bg-white z-10 py-[6rem] relative">
+      <div style={{ height: "100px", position: "relative", overflow: "hidden" }} className=" ">
       <LogoLoop
         logos={techLogos}
         speed={120}
@@ -59,6 +60,7 @@ export default function Logo() {
         fadeOutColor="#ffffff"
         ariaLabel="Technology partners"
       />
+    </div>
     </div>
   );
 }

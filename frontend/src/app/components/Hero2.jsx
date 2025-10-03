@@ -4,14 +4,13 @@ import { motion } from "motion/react";
 
 export default function Hero2() {
   return (
-    <div className="bg-white z-10 relative">
-      <div className=" relative z-30 bg-transparent">
+    <div className=" relative z-10 bg-white border-2 border-transparent">
       <svg
         id="Layer_1"
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 850 120"
-        className="-mt-[10vw]"
+        className="-mt-[10vw] "
         aria-hidden="true"
       >
         <path
@@ -21,6 +20,7 @@ export default function Hero2() {
       </svg>
 
       {/* Hero */}
+
       <div className="bg-[#F9F9F9] rounded-b-[70px] flex h-full ">
         {/* LEFT: text */}
         <div className="flex w-[65vw] justify-center mb-[8rem]">
@@ -37,9 +37,13 @@ export default function Hero2() {
               <TextReveal>
                 <div className="font-serif leading-[1.23] tracking-[-0.065em] text-black">
                   <span className="block">
-                    <span className="text-VividGreen italic">Spain Academy </span>is your all-in-one
+                    <span className="text-VividGreen italic">
+                      Spain Academy{" "}
+                    </span>
+                    is your all-in-one
                   </span>
-                  onboarding kit for life in <span className="italic"> Spain</span>.
+                  onboarding kit for life in{" "}
+                  <span className="italic"> Spain</span>.
                 </div>
               </TextReveal>
 
@@ -92,7 +96,6 @@ export default function Hero2() {
           />
         </div>
       </div>
-    </div>
     </div>
   );
 }

@@ -26,7 +26,7 @@ export default function Home() {
         <Progress />
         <Questions />
 
-        {/* <Footer /> */}
+        <Footer />
         {/* <Offer_v3 />
          <Offer_v4 />
         <Offer_v5 /> */}

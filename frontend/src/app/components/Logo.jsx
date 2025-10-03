@@ -1,5 +1,4 @@
 import LogoLoop from "../templates/LogoLoop";
-
 import {
   SiReact,
   SiNextdotjs,

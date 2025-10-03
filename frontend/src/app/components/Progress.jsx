@@ -8,6 +8,7 @@ import { motion } from "motion/react";
 import TextReveal from "../templates/TextReveal";
 import Button from "./Button";
 
+
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
 export default function Progress() {

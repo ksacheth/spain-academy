@@ -1,6 +1,7 @@
 "use client";
 import TextReveal from "../templates/TextReveal";
 import { motion } from "motion/react";
+
 export default function Offer() {
   return (
     <div className="w-full z-10 relative bg-white  pb-[10rem]">

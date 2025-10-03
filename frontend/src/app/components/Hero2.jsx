@@ -1,7 +1,6 @@
 "use client";
 import TextReveal from "../templates/TextReveal";
 import { motion } from "motion/react";
-
 export default function Hero2() {
   return (
     <div className=" relative z-10 bg-white border-2 border-transparent">

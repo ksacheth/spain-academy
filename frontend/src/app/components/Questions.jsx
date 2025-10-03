@@ -3,7 +3,6 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import TextReveal from "../templates/TextReveal";
 
-
 export default function Questions() {
   const [hoveredCard, setHoveredCard] = useState(null);
   return (

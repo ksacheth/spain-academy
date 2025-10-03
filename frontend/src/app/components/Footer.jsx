@@ -1,4 +1,5 @@
 import CenterUnderline from "../templates/underline-center";
+
 export default function Footer() {
   return (
     <>

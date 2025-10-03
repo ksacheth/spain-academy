@@ -5,12 +5,10 @@ on:
       - main
 
 jobs:
-  deploy:
-    name: Push to EC2
+   deploy-main:
+    name: Push to EC2 (main)
     runs-on: ubuntu-latest
-
     steps:
-
       - name: executing remote ssh commands using key
         uses: appleboy/ssh-action@v1.2.2
         with:
@@ -18,4 +16,4 @@ jobs:
           username: ubuntu
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           port: 22
-          script: ./deploy.sh
+          script: ./deploy-main.sh

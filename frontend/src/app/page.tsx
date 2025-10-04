@@ -23,7 +23,7 @@ export default function Home() {
         <Spain />
         <Progress />
         <StackingCardsDemo />
-        {/* <Questions /> */}
+        <Questions />
         <Footer />
         {/* <Offer_v3 />
          <Offer_v4 />

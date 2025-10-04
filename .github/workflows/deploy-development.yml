@@ -8,7 +8,7 @@ on:
 jobs:
   deploy-development:
     name: Push to EC2 (dev)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest 
     steps:
       - name: executing remote ssh commands using key
         uses: appleboy/ssh-action@v1.2.2

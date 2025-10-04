@@ -32,7 +32,7 @@ const publicSans = Public_Sans({
 });
 
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Spain Academy - The Study-in-Spain Starter Kit for Southeast Asians",
   description:
     "Visas, university admissions, language school, and real-life support for Southeast Asian students in Spain. From application to graduation, we're with you all the way. Book a free consultation.",

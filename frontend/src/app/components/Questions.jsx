@@ -6,7 +6,7 @@ import TextReveal from "../templates/TextReveal";
 export default function Questions() {
   const [hoveredCard, setHoveredCard] = useState(null);
   return (
-    <>
+    <div id="contact">
       <div className="h-[150svh] bg-white pt-[2rem] z-10 relative">
         <div className="flex flex-col items-center">
           <div className="pt-[5rem] w-[80vw] font-serif flex flex-col items-center">
@@ -163,6 +163,6 @@ export default function Questions() {
         </div>
       </div>
       
-    </>
+    </div>
   );
 }

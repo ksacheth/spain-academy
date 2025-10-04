@@ -23,11 +23,11 @@ export default function Header() {
         </div>
 
         <div className="hidden md:flex items-center justify-between text-lg font-medium w-[50%]">
-          <a href="/"><CenterUnderline>The Team</CenterUnderline></a>
-          <a href="/about">
+          <a href="#team"><CenterUnderline>The Team</CenterUnderline></a>
+          <a href="#blog">
             <CenterUnderline>Blog</CenterUnderline>
           </a>
-          <a href="#contact">
+          <a href="#satv">
             <CenterUnderline>SA.TV</CenterUnderline>
           </a>
           <a href="#contact">

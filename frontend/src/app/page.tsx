@@ -12,8 +12,9 @@ import StackingCardsDemo from "./components/Stacking";
 import Team from "./components/Team";
 export default function Home() {
   return (
-    <div>
-      <ReactLenis root>
+    <ReactLenis root>
+    <div className="w-screen overflow-x-hidden">
+      
         <Headers />
         <Hero />
         <Hero2 />
@@ -24,13 +25,15 @@ export default function Home() {
         <Progress />
         <StackingCardsDemo />
         <Questions />
-        <Footer />
+        
         {/* <Offer_v3 />
          <Offer_v4 />
         <Offer_v5 /> */}
-      </ReactLenis>
+      
       {/* <Team /> */}
       
     </div>
+    <Footer />
+    </ReactLenis>
   );
 }

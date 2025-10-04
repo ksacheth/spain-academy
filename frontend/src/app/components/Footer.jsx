@@ -27,7 +27,7 @@ export default function Footer() {
               <li className="hover:underline cursor-pointer">X (Twitter)</li>
             </ul>
           </div>
-          <h2 className="absolute bottom-0 left-0  translate-y-1/3 sm:text-[192px]  text-[80px] text-[#ff5941] font-calendas">
+          <h2 className="absolute bottom-0 left-0  translate-y-1/3 text-[80px] sm:text-[192px]  text-[#ff5941] font-calendas">
             Spain Academy
           </h2>
         </div>

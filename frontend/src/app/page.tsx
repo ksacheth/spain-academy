@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Headers from "./components/NavBar";
 import Hero from "./components/Hero";
 import Hero2 from "./components/Hero2";
@@ -9,27 +8,29 @@ import Logo from "./components/Logo";
 import Footer from "./components/Footer";
 import { Spain } from "./components/Spain";
 import { ReactLenis } from "lenis/react";
-import Offer_v3 from "./temp/Offer_v3";
-import Offer_v4 from "./temp/Offer_v4";
-import Offer_v5 from "./temp/Offer_v5";
-
+import StackingCardsDemo from "./components/Stacking";
+import Team from "./components/Team";
 export default function Home() {
   return (
-    <>
+    <div>
       <ReactLenis root>
         <Headers />
         <Hero />
         <Hero2 />
         <Logo />
+        
         <Offer />
         <Spain />
         <Progress />
+        <StackingCardsDemo />
         <Questions />
         <Footer />
         {/* <Offer_v3 />
          <Offer_v4 />
         <Offer_v5 /> */}
       </ReactLenis>
-    </>
+      {/* <Team /> */}
+      
+    </div>
   );
 }

@@ -1,10 +1,10 @@
 import { Analytics } from "@vercel/analytics/next";
+import type { Metadata } from "next";
 import { Inter, Noto_Serif, Public_Sans, Arimo } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import SmoothScrollProvider from "./temp/LenisProvider";
-import { ReactLenisProvider } from "./temp/ReactLenis";
-import LenisProvider from "./temp/LenisProvider";
+
+
 
 const arimo = Arimo({
   variable: "--font-arimo",
@@ -31,6 +31,7 @@ const publicSans = Public_Sans({
   display: "swap",
 });
 
+
 export const metadata = {
   title: "Spain Academy - The Study-in-Spain Starter Kit for Southeast Asians",
   description:
@@ -56,8 +57,11 @@ export const metadata = {
     "life in Spain for students",
   ],
 };
-
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
       <body

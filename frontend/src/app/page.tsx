@@ -10,11 +10,13 @@ import { Spain } from "./components/Spain";
 import { ReactLenis } from "lenis/react";
 import StackingCardsDemo from "./components/Stacking";
 import Team from "./components/Team";
+import NavbarDemo from "./components/NavBar_v2";
 export default function Home() {
   return (
     <ReactLenis root>
       <div className="w-screen ">
-        <Headers />
+        {/* <Headers /> */}
+        <NavbarDemo />
         <Hero />
         <Hero2 />
         <Logo />

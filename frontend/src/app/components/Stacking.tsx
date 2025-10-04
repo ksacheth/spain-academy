@@ -70,7 +70,7 @@ export default function StackingCardsDemo() {
                   bgColor,
                    index === 0 ? "text-black" : "",
                   index === 4 ? "text-black" : "",
-                  "h-[80%] sm:h-[70%] flex-col sm:flex-row aspect-video px-8 py-10 flex w-11/12 rounded-3xl mx-auto relative"
+                  "h-[80%] sm:h-[70%] flex-col sm:flex-row aspect-video px-8 py-10 flex w-11/12 rounded-3xl mx-auto relative  shadow-lg"
                 )}
               >
                 <div className="flex-1 flex flex-col justify-center">

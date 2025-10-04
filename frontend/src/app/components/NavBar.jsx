@@ -4,6 +4,8 @@ import Button from "./Button";
 import { Menu, X } from "lucide-react";
 import { motion } from "motion/react";
 import CenterUnderline from "../templates/underline-center";
+
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -35,15 +37,7 @@ export default function Header() {
           </a>
         </div>
 
-        <motion.div
-          whileHover={{ scale: 1.1, cursor: "pointer" }}
-          transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className="hidden md:block"
-        >
-          <Button scaleV={25} backgroundColor="var(--color-VividGreen)">
-            Book
-          </Button>
-        </motion.div>
+        
 
         <button
           onClick={toggleMenu}

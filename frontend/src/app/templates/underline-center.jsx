@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useMemo } from "react";
 import { motion } from "motion/react";
-import { cn } from "../utils";
+import { cn } from "../lib/utils";
 
 const CenterUnderline = ({
   children,
@@ -12,25 +12,31 @@ const CenterUnderline = ({
   underlinePaddingRatio = 0.01,
   ...props
 }) => {
-  const textRef = useRef(null)
-  const MotionComponent = useMemo(() => motion.create(as ?? "span"), [as])
+  const textRef = useRef(null);
+  const MotionComponent = useMemo(() => motion.create(as ?? "span"), [as]);
 
   useEffect(() => {
     const updateUnderlineStyles = () => {
       if (textRef.current) {
-        const fontSize = parseFloat(getComputedStyle(textRef.current).fontSize)
-        const underlineHeight = fontSize * underlineHeightRatio
-        const underlinePadding = fontSize * underlinePaddingRatio
-        textRef.current.style.setProperty("--underline-height", `${underlineHeight}px`)
-        textRef.current.style.setProperty("--underline-padding", `${underlinePadding}px`)
+        const fontSize = parseFloat(getComputedStyle(textRef.current).fontSize);
+        const underlineHeight = fontSize * underlineHeightRatio;
+        const underlinePadding = fontSize * underlinePaddingRatio;
+        textRef.current.style.setProperty(
+          "--underline-height",
+          `${underlineHeight}px`
+        );
+        textRef.current.style.setProperty(
+          "--underline-padding",
+          `${underlinePadding}px`
+        );
       }
-    }
+    };
 
-    updateUnderlineStyles()
-    window.addEventListener("resize", updateUnderlineStyles)
+    updateUnderlineStyles();
+    window.addEventListener("resize", updateUnderlineStyles);
 
     return () => window.removeEventListener("resize", updateUnderlineStyles);
-  }, [underlineHeightRatio, underlinePaddingRatio])
+  }, [underlineHeightRatio, underlinePaddingRatio]);
 
   const underlineVariants = {
     hidden: {
@@ -41,14 +47,15 @@ const CenterUnderline = ({
       width: "100%",
       transition: transition,
     },
-  }
+  };
 
   return (
     <MotionComponent
       className={cn("relative inline-block cursor-pointer", className)}
       whileHover="visible"
       ref={textRef}
-      {...props}>
+      {...props}
+    >
       <span>{children}</span>
       <motion.div
         className="absolute left-1/2 bg-current -translate-x-1/2"
@@ -57,11 +64,12 @@ const CenterUnderline = ({
           bottom: "calc(-1 * var(--underline-padding))",
         }}
         variants={underlineVariants}
-        aria-hidden="true" />
+        aria-hidden="true"
+      />
     </MotionComponent>
   );
-}
+};
 
-CenterUnderline.displayName = "CenterUnderline"
+CenterUnderline.displayName = "CenterUnderline";
 
-export default CenterUnderline
+export default CenterUnderline;

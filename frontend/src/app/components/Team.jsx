@@ -2,19 +2,18 @@ import ScrollStack, { ScrollStackItem } from "../templates/ScrollStack";
 
 export default function Team() {
   return (
-    <ScrollStack>
-      <ScrollStackItem>
-        <h2>Card 1</h2>
-        <p>This is the first card in the stack</p>
-      </ScrollStackItem>
-      <ScrollStackItem>
-        <h2>Card 2</h2>
-        <p>This is the second card in the stack</p>
-      </ScrollStackItem>
-      <ScrollStackItem>
-        <h2>Card 3</h2>
-        <p>This is the third card in the stack</p>
-      </ScrollStackItem>
-    </ScrollStack>
+    <div className="h-screen w-screen">
+      <ScrollStack>
+        <ScrollStackItem itemClassName="bg-VividYellow h-[28rem]">
+          <h1 className="text-white font-bold text-5xl">The Team</h1>
+        </ScrollStackItem>
+        <ScrollStackItem itemClassName="bg-VividGreen h-[28rem]">
+          <h1 className="text-white font-bold text-5xl">The Team</h1>
+        </ScrollStackItem>
+        <ScrollStackItem itemClassName="bg-VividRed h-[28rem]">
+         <h1 className="text-white font-bold text-5xl">The Team</h1>
+        </ScrollStackItem>
+      </ScrollStack>
+    </div>
   );
 }

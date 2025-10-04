@@ -16,8 +16,7 @@ import {
   type MotionValue,
   type UseScrollOptions,
 } from "motion/react";
-import {cn}  from "../utils"
-
+import { cn } from "../lib/utils";
 
 interface StackingCardsProps
   extends PropsWithChildren,

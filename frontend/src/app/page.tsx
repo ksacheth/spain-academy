@@ -13,8 +13,8 @@ import Team from "./components/Team";
 export default function Home() {
   return (
     <div>
-      {/* <ReactLenis root> */}
-        {/* <Headers />
+      <ReactLenis root>
+        <Headers />
         <Hero />
         <Hero2 />
         <Logo />
@@ -22,14 +22,15 @@ export default function Home() {
         <Offer />
         <Spain />
         <Progress />
+        <StackingCardsDemo />
         <Questions />
-        <Footer /> */}
+        <Footer />
         {/* <Offer_v3 />
          <Offer_v4 />
         <Offer_v5 /> */}
-      {/* </ReactLenis> */}
-      <Team />
-      {/* <StackingCardsDemo /> */}
+      </ReactLenis>
+      {/* <Team /> */}
+      
     </div>
   );
 }

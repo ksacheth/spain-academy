@@ -3,11 +3,11 @@ name: Deploy to EC2-dev
 on:
   push:
     branches:
-      - development
+      - dev
 
 jobs:
   deploy-development:
-    name: Push to EC2 (development)
+    name: Push to EC2 (dev)
     runs-on: ubuntu-latest
     steps:
       - name: executing remote ssh commands using key

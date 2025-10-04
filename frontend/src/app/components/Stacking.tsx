@@ -57,10 +57,9 @@ export default function StackingCardsDemo() {
   return (
     <div
       className="min-h-[300vh] bg-white text-white relative z-10"
-      id="team"
     >
       <StackingCards totalCards={cards.length} >
-        <div  className="relative  font-inter h-[620px] w-full z-10 text-2xl md:text-7xl font-bold uppercase flex justify-center items-center text-[#ff5941] whitespace-pre">
+        <div className="relative  font-inter h-[620px] w-full z-10 text-2xl md:text-7xl font-bold uppercase flex justify-center items-center text-[#ff5941] whitespace-pre">
           The Team ↓
         </div>
         {cards.map(({ bgColor, description, image, title }, index) => {

@@ -13,27 +13,25 @@ import Team from "./components/Team";
 export default function Home() {
   return (
     <ReactLenis root>
-    <div className="w-screen overflow-x-hidden">
-      
+      <div className="w-screen ">
         <Headers />
         <Hero />
         <Hero2 />
         <Logo />
-        
+
         <Offer />
         <Spain />
         <Progress />
         <StackingCardsDemo />
         <Questions />
-        
+
         {/* <Offer_v3 />
          <Offer_v4 />
         <Offer_v5 /> */}
-      
-      {/* <Team /> */}
-      
-    </div>
-    <Footer />
+
+        {/* <Team /> */}
+      </div>
+      <Footer />
     </ReactLenis>
   );
 }

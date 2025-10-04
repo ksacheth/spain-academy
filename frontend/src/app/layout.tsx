@@ -65,7 +65,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${notoSerif.variable} ${publicSans.variable} ${arimo.variable} antialiased`}
+        className={`${inter.variable} ${notoSerif.variable} ${publicSans.variable} ${arimo.variable} antialiased overflow-x-hidden`}
       >
         {children}
         <Analytics />

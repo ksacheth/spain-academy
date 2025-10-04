@@ -15,30 +15,65 @@ export const Navbar = ({
   children,
   className
 }) => {
-  const ref = useRef(null);
-  const { scrollY } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
+  const { scrollY } = useScroll();
+
+  // This state handles the initial shrink animation
   const [visible, setVisible] = useState(false);
+
+  // This new state handles hiding/showing the navbar on scroll
+  const [hidden, setHidden] = useState(false);
+
+  /**
+   * This hook is used to track the scroll position and
+   * update the states accordingly.
+   */
   useMotionValueEvent(scrollY, "change", (latest) => {
-    // Set visibility based on scroll position
+    const previous = scrollY.getPrevious();
+
+    // 1. Handle the initial shrink animation
     if (latest > 100) {
       setVisible(true);
     } else {
       setVisible(false);
     }
+
+    // 2. Handle hiding and showing the navbar after it has shrunk
+    // If the user scrolls down (latest > previous) and the navbar is already shrunk, hide it.
+    // Otherwise, show it.
+    if (visible && latest > previous) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
   });
 
   return (
     <motion.div
-      ref={ref}
-      // The className is updated here for the desired effect
-      className={cn("fixed inset-x-0 top-0 z-40 w-full", className)}>
+      variants={{
+        /**
+         * The `visible` variant is used when the navbar is shown.
+         * It has a `y` of 0, which means it's in its normal position.
+         */
+        visible: { y: 0 },
+        /**
+         * The `hidden` variant is used when the navbar is hidden.
+         * It has a `y` of "-150%" to ensure it's completely out of view.
+         */
+        hidden: { y: "-150%" },
+      }}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+      className={cn(
+        "fixed inset-x-0 top-0 z-40 w-full",
+        className
+      )}
+    >
+      {/* The children components still receive the `visible` prop to handle their own shrink animations */}
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
           ? React.cloneElement(child, { visible })
-          : child)}
+          : child
+      )}
     </motion.div>
   );
 };

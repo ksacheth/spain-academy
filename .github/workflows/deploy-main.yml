@@ -16,4 +16,6 @@ jobs:
           username: ${{ secrest.EC2_HOST_NAME }}
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           port: 22
-          script: ./deploy-main.sh
+          script: |
+            cd scripts 
+            ./deploy-dev.sh 

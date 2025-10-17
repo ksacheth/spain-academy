@@ -1,22 +1,55 @@
-# name: Deploy to EC2-dev
+name: Deploy to EC2-dev
+on:
+  push:
+    branches:
+      - dev
 
-# on:
-#   push:
-#     branches:
-#       - dev
+jobs:
+  deploy-dev:
+    name: Push to EC2 (dev)
+    runs-on: ubuntu-latest
+    steps:
+      - name: executing remote ssh commands using key
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_HOST_NAME }}
+          key: ${{ secrets.PRIVATE_SSH_KEY }}
+          port: 22
+          script: |
 
-# jobs:
-#   deploy-development:
-#     name: Push to EC2 (dev)
-#     runs-on: ubuntu-latest 
-#     steps:
-#       - name: executing remote ssh commands using key
-#         uses: appleboy/ssh-action@v1.2.2
-#         with:
-#           host: ${{ secrets.EC2_HOST }}
-#           username: ${{ secrets.EC2_HOST_NAME }}
-#           key: ${{ secrets.PRIVATE_SSH_KEY }}
-#           port: 22
-#           script: |
-#             cd scripts 
-#             ./deploy-dev.sh        
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            export PATH="/home/ubuntu/.bun/bin:$PATH"
+
+
+            cd ~/devops/spain-academy
+            git fetch
+            git checkout origin dev
+            git pull origin dev
+
+
+            cd frontend
+            bun install
+            bun run build
+
+
+            APP_NAME="spain-academy-dev"
+
+
+            pm2 describe $APP_NAME > /dev/null
+            RUNNING=$?
+
+            if [ "${RUNNING}" -ne 0 ]; then
+              # If it's not running, start it
+              echo "Starting $APP_NAME..."
+              pm2 start bun --name "$APP_NAME" -- start -- -p 3001
+            else
+              # If it is running, restart it to apply changes
+              echo "Restarting $APP_NAME..."
+              pm2 restart $APP_NAME
+            fi
+
+
+            pm2 save
+        

@@ -14,7 +14,9 @@ jobs:
         uses: appleboy/ssh-action@v1.2.2
         with:
           host: ${{ secrets.EC2_HOST }}
-          username: ubuntu
+          username: ${{ secrest.EC2_HOST_NAME }}
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           port: 22
-          script: ./deploy-dev.sh
+          script: |
+            cd scripts 
+            ./deploy-dev.sh        

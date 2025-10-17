@@ -1,22 +1,22 @@
-name: Deploy to EC2-dev2
+# name: Deploy to EC2-dev2
 
-on:
-  push:
-    branches:
-      - dev2
+# on:
+#   push:
+#     branches:
+#       - dev2
 
-jobs:
-  deploy-development:
-    name: Push to EC2 (dev2)
-    runs-on: ubuntu-latest
-    steps:
-      - name: executing remote ssh commands using key
-        uses: appleboy/ssh-action@v1.2.2
-        with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_HOST_NAME }}
-          key: ${{ secrets.PRIVATE_SSH_KEY }}
-          port: 22
-          script: |
-            cd scripts 
-            ./deploy-dev.sh 
+# jobs:
+#   deploy-development:
+#     name: Push to EC2 (dev2)
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: executing remote ssh commands using key
+#         uses: appleboy/ssh-action@v1.2.2
+#         with:
+#           host: ${{ secrets.EC2_HOST }}
+#           username: ${{ secrets.EC2_HOST_NAME }}
+#           key: ${{ secrets.PRIVATE_SSH_KEY }}
+#           port: 22
+#           script: |
+#             cd scripts 
+#             ./deploy-dev.sh 

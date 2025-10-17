@@ -11,6 +11,7 @@ import { ReactLenis } from "lenis/react";
 import StackingCardsDemo from "./components/Stacking";
 import Team from "./components/Team";
 import NavbarDemo from "./components/NavBar_v2";
+
 export default function Home() {
   return (
     <ReactLenis root>

@@ -20,7 +20,7 @@ jobs:
 
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-            export PATH="/home/ubuntu/.bun/bin:$PATH"
+            export PATH="/home/admin/.bun/bin:$PATH"
 
 
             cd ~/devops/spain-academy
